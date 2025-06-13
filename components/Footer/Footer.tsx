@@ -159,7 +159,7 @@ export function Footer() {
               </Stack>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 6 }}>
-              <Stack gap="xs" align={{ base: 'start', md: 'end' }}>
+              <Stack gap="xs" align={"start"}>
                 <Text size="sm" fw={500} c="gray.3">
                   Follow us
                 </Text>
