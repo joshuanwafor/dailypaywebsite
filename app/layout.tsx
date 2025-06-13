@@ -7,8 +7,8 @@ import { Header } from '../components/Header/Header';
 import { Footer } from '../components/Footer/Footer';
 
 export const metadata = {
-  title: 'Your POS Solution',
-  description: 'Modern and reliable POS solution for your business',
+  title: 'DailyPay by Alerts - Get Paid Every Day You Work',
+  description: 'Empowering African workers to access their earned wages daily. Get paid every day you work, with zero interest on claimed funds.',
 };
 
 export default function RootLayout({ children }: { children: any }) {
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: any }) {
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>

@@ -7,30 +7,38 @@ import {
   IconBrandInstagramFilled,
   IconBrandLinkedinFilled,
   IconBrandXFilled,
+  IconShield,
+  IconLock,
+  IconMail,
+  IconPhone,
 } from '@tabler/icons-react';
-import { Box, Container, Divider, Grid, Group, Image, Stack, Text } from '@mantine/core';
+import { Box, Container, Divider, Grid, Group, Stack, Text, Title } from '@mantine/core';
 import classes from './Footer.module.css';
 
 const footerLinks = {
   product: [
     { label: 'Features', link: '/features' },
-    { label: 'Download', link: 'download' },
-    { label: 'Updates', link: '/#updates' },
+    { label: 'How It Works', link: '/how-it-works' },
+    { label: 'Pricing', link: '/pricing' },
+    { label: 'Download App', link: '/download' },
   ],
   support: [
-    { label: 'Help Center', link: '/#help' },
+    { label: 'Help Center', link: '/help' },
     { label: 'FAQ', link: '/faq' },
-    { label: 'Contact', link: '/#contact' },
+    { label: 'Contact Us', link: '/contact' },
+    { label: 'Customer Support', link: '/support' },
   ],
   company: [
-    { label: 'About', link: '/#about' },
-    { label: 'Blog', link: '/#blog' },
-    { label: 'Partners', link: '/#partners' },
+    { label: 'About Us', link: '/about' },
+    { label: 'Careers', link: '/careers' },
+    { label: 'Blog', link: '/blog' },
+    { label: 'Press', link: '/press' },
   ],
   legal: [
-    { label: 'Privacy Policy', link: '/policy' },
+    { label: 'Privacy Policy', link: '/privacy' },
     { label: 'Terms of Service', link: '/terms' },
-    { label: 'Acceptable use', link: '/acceptable-use' },
+    { label: 'Security', link: '/security' },
+    { label: 'Compliance', link: '/compliance' },
   ],
 };
 
@@ -38,29 +46,44 @@ export function Footer() {
   return (
     <footer className={classes.footer}>
       <Container size="lg">
-        <div className={classes.inner}>
-          <div className={classes.logo}>
-          <Link href="/" className={classes.logo}>
-              <Box>
-                <img src="/logo-text1.svg" alt="Shopkeeper" width={190} />
-              </Box>
-            </Link>
-            <Text size="sm" c="dimmed" mt="md" maw={300}>
-              Modern point of sale solution for retail stores and hospitality businesses
-            </Text>
-            <Text size="sm" c="dimmed" mt="lg">
-              Contact us:{' '}
-              <Link href="mailto:support@shopkeeperpos.com" className={classes.link}>
-                support@shopkeeperpos.com
+        <Grid gutter="xl">
+          {/* Brand Section */}
+          <Grid.Col span={{ base: 12, md: 4 }}>
+            <Stack gap="md">
+              <Link href="/" className={classes.brandLink}>
+                <Group gap="xs">
+                  <img src="/6.png" alt="Shopkeeper" width={160} />
+                </Group>
               </Link>
-            </Text>
-          </div>
+              
+              <Text size="sm" c="gray.3" lh={1.6}>
+                Empowering African workers to access their earned wages daily. 
+                Get paid every day you work, with zero interest on claimed funds.
+              </Text>
+              
+              <Stack gap="xs" mt="md">
+                <Group gap="sm">
+                  <IconShield size={16} color="var(--mantine-color-green-4)" />
+                  <Text size="xs" c="gray.4">
+                    Bank-level security & encryption
+                  </Text>
+                </Group>
+                <Group gap="sm">
+                  <IconLock size={16} color="var(--mantine-color-green-4)" />
+                  <Text size="xs" c="gray.4">
+                    Fully licensed & compliant
+                  </Text>
+                </Group>
+              </Stack>
+            </Stack>
+          </Grid.Col>
 
-          <div className={classes.groups}>
-            <Grid gutter={32}>
-              <Grid.Col span={{ base: 6, xs: 3 }}>
-                <Stack gap="md">
-                  <Text fw={700} className={classes.title}>
+          {/* Links Sections */}
+          <Grid.Col span={{ base: 12, md: 8 }}>
+            <Grid>
+              <Grid.Col span={{ base: 6, sm: 3 }}>
+                <Stack gap="sm">
+                  <Text fw={600} className={classes.title} c="white">
                     Product
                   </Text>
                   {footerLinks.product.map((link) => (
@@ -71,9 +94,9 @@ export function Footer() {
                 </Stack>
               </Grid.Col>
 
-              <Grid.Col span={{ base: 6, xs: 3 }}>
-                <Stack gap="md">
-                  <Text fw={700} className={classes.title}>
+              <Grid.Col span={{ base: 6, sm: 3 }}>
+                <Stack gap="sm">
+                  <Text fw={600} className={classes.title} c="white">
                     Support
                   </Text>
                   {footerLinks.support.map((link) => (
@@ -84,9 +107,9 @@ export function Footer() {
                 </Stack>
               </Grid.Col>
 
-              <Grid.Col span={{ base: 6, xs: 3 }}>
-                <Stack gap="md">
-                  <Text fw={700} className={classes.title}>
+              <Grid.Col span={{ base: 6, sm: 3 }}>
+                <Stack gap="sm">
+                  <Text fw={600} className={classes.title} c="white">
                     Company
                   </Text>
                   {footerLinks.company.map((link) => (
@@ -97,9 +120,9 @@ export function Footer() {
                 </Stack>
               </Grid.Col>
 
-              <Grid.Col span={{ base: 6, xs: 3 }}>
-                <Stack gap="md">
-                  <Text fw={700} className={classes.title}>
+              <Grid.Col span={{ base: 6, sm: 3 }}>
+                <Stack gap="sm">
+                  <Text fw={600} className={classes.title} c="white">
                     Legal
                   </Text>
                   {footerLinks.legal.map((link) => (
@@ -110,31 +133,66 @@ export function Footer() {
                 </Stack>
               </Grid.Col>
             </Grid>
-          </div>
-        </div>
+          </Grid.Col>
+        </Grid>
 
-        <Divider my="xl" />
+        {/* Contact Info */}
+        <Box mt="xl" pt="md" className={classes.contactSection}>
+          <Grid>
+            <Grid.Col span={{ base: 12, md: 6 }}>
+              <Stack gap="xs">
+                <Text size="sm" fw={500} c="gray.3">
+                  Get in touch
+                </Text>
+                <Group gap="sm">
+                  <IconMail size={16} color="var(--mantine-color-gray-4)" />
+                  <Link href="mailto:support@dailypay.alerts.com" className={classes.contactLink}>
+                    support@dailypay.alerts.com
+                  </Link>
+                </Group>
+                <Group gap="sm">
+                  <IconPhone size={16} color="var(--mantine-color-gray-4)" />
+                  <Text size="sm" c="gray.4">
+                    +234 (0) 800 DAILY PAY
+                  </Text>
+                </Group>
+              </Stack>
+            </Grid.Col>
+            <Grid.Col span={{ base: 12, md: 6 }}>
+              <Stack gap="xs" align={{ base: 'start', md: 'end' }}>
+                <Text size="sm" fw={500} c="gray.3">
+                  Follow us
+                </Text>
+                <Group gap="md">
+                  <Link href="https://twitter.com/dailypayalerts" className={classes.socialLink}>
+                    <IconBrandXFilled size={20} />
+                  </Link>
+                  <Link href="https://instagram.com/dailypayalerts" className={classes.socialLink}>
+                    <IconBrandInstagramFilled size={20} />
+                  </Link>
+                  <Link href="https://linkedin.com/company/dailypayalerts" className={classes.socialLink}>
+                    <IconBrandLinkedinFilled size={20} />
+                  </Link>
+                  <Link href="https://facebook.com/dailypayalerts" className={classes.socialLink}>
+                    <IconBrandFacebookFilled size={20} />
+                  </Link>
+                </Group>
+              </Stack>
+            </Grid.Col>
+          </Grid>
+        </Box>
 
-        <div className={classes.afterFooter}>
-          <Text size="sm" c="dimmed">
-            © {new Date().getFullYear()} Shopkeeper POS. All rights reserved.
+        <Divider my="xl" color="gray.7" />
+
+        {/* Bottom Section */}
+        <Group justify="space-between" className={classes.bottom}>
+          <Text size="sm" c="gray.5">
+            © {new Date().getFullYear()} DailyPay by Alerts. All rights reserved.
           </Text>
-
-          <Group gap="xs" className={classes.social}>
-            <Link href="https://twitter.com/shopkeeperpos" className={classes.socialLink}>
-              <IconBrandXFilled />
-            </Link>
-            <Link href="https://github.com/shopkeeperpos" className={classes.socialLink}>
-              <IconBrandInstagramFilled />
-            </Link>
-            <Link href="https://linkedin.com/company/shopkeeperpos" className={classes.socialLink}>
-              <IconBrandLinkedinFilled />
-            </Link>
-            <Link href="https://facebook.com/shopkeeperpos" className={classes.socialLink}>
-              <IconBrandFacebookFilled />
-            </Link>
-          </Group>
-        </div>
+          <Text size="sm" c="gray.5">
+            Licensed financial services provider in Nigeria
+          </Text>
+        </Group>
       </Container>
     </footer>
   );
