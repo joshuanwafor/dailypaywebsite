@@ -1,0 +1,119 @@
+.header {
+  background: linear-gradient(to right, var(--mantine-color-gray-0), var(--mantine-color-gray-1));
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+}
+
+.title {
+  font-size: rem(48px);
+  line-height: 1.2;
+  font-weight: 900;
+  color: var(--mantine-color-dark-8);
+  margin: var(--mantine-spacing-md) 0;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(36px);
+  }
+}
+
+.section {
+  padding: var(--mantine-spacing-xl) 0;
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 28px;
+  }
+}
+
+.planCard {
+  height: 100%;
+  padding: 36px;
+  background-color: var(--mantine-color-white);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-width: 2px;
+}
+
+.planCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--mantine-shadow-md);
+}
+
+.faqCard {
+  background-color: var(--mantine-color-white);
+  padding: 36px;
+  border: 1px solid var(--mantine-color-gray-2);
+}
+
+.infoCard {
+  background-color: var(--mantine-color-gray-0);
+  padding: var(--mantine-spacing-sm);
+  margin-top: auto;
+}
+
+.appIcon {
+  box-shadow: var(--mantine-shadow-md);
+}
+
+.benefitsCard {
+  background: linear-gradient(to right, var(--mantine-color-gray-0), var(--mantine-color-blue-0));
+  padding: calc(var(--mantine-spacing-xl) * 2);
+  overflow: hidden;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: var(--mantine-spacing-xl);
+  }
+}
+
+.imageWrapper {
+  padding: var(--mantine-spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: var(--mantine-spacing-md);
+  }
+}
+
+.mobilePreview {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--mantine-radius-md);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: perspective(800px) rotateY(-5deg);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: perspective(800px) rotateY(0);
+  }
+}
+
+.requirementsCard {
+  background-color: var(--mantine-color-white);
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+}
+
+.helpCard {
+  height: 100%;
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+  background-color: var(--mantine-color-white);
+}
+
+.helpIcon {
+  box-shadow: var(--mantine-shadow-md);
+} 

@@ -1,0 +1,98 @@
+.header {
+  background: linear-gradient(to right, var(--mantine-color-gray-0), var(--mantine-color-gray-1));
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+}
+
+.title {
+  font-size: rem(48px);
+  line-height: 1.2;
+  font-weight: 900;
+  color: var(--mantine-color-dark-8);
+  margin: var(--mantine-spacing-md) 0;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(36px);
+  }
+}
+
+.categoryCard {
+  padding: var(--mantine-spacing-xl);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--mantine-shadow-md);
+  }
+}
+
+.categoryIcon {
+  margin: 0 auto;
+  box-shadow: var(--mantine-shadow-md);
+}
+
+.section {
+  margin-bottom: var(--mantine-spacing-xl) * 2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sectionTitle {
+  font-size: rem(36px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--mantine-spacing-md);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(28px);
+  }
+}
+
+.contactCard {
+  background: linear-gradient(to right, var(--mantine-color-gray-0), var(--mantine-color-blue-0));
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: var(--mantine-spacing-xl);
+  }
+}
+
+.contactIcon {
+  background-color: var(--mantine-color-blue-6);
+  color: var(--mantine-color-white);
+  box-shadow: var(--mantine-shadow-md);
+}
+
+.formCard {
+  background: linear-gradient(
+    to right,
+    var(--mantine-color-gray-0),
+    var(--mantine-color-red-0)
+  );
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: var(--mantine-spacing-xl);
+  }
+}
+
+.infoCard {
+  background-color: var(--mantine-color-gray-0);
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+  height: 100%;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: var(--mantine-spacing-xl);
+  }
+}
+
+.deleteButton {
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--mantine-shadow-md);
+  }
+} 
