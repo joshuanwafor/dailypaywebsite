@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { IconArrowRight, IconLogin, IconUser, IconShield } from '@tabler/icons-react';
+import { IconArrowRight, IconLogin, IconShield, IconUser } from '@tabler/icons-react';
 import {
   Box,
   Burger,
@@ -11,11 +10,11 @@ import {
   Divider,
   Drawer,
   Group,
+  Image,
   Stack,
   Text,
   Title,
   useMantineTheme,
-  Image,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
@@ -38,34 +37,34 @@ export function Header() {
     <Box className={classes.header}>
       <Container size="lg">
         <Group justify="space-between" h="70px">
-          <Link href="/" className={classes.logo}>
+          <a href="/" className={classes.logo}>
             <Image
-              src="/logo-text-light.svg"
+              src="/5.png"
               alt="DailyPay by Alerts"
               h={40}
               w="auto"
               fit="contain"
             />
-          </Link>
-          
+          </a>
+
           <Group gap="md" visibleFrom="sm">
             {mainItems}
           </Group>
 
           <Group gap="sm">
-            <Button 
-              variant="subtle" 
-              component="a" 
-              href="/login" 
+            <Button
+              variant="subtle"
+              component="a"
+              href="/login"
               visibleFrom="sm"
               size="sm"
               className={classes.loginBtn}
             >
               Login
             </Button>
-            <Button 
-              component="a" 
-              href="/register" 
+            <Button
+              component="a"
+              href="/register"
               visibleFrom="sm"
               size="sm"
               className={classes.ctaBtn}
@@ -85,7 +84,7 @@ export function Header() {
 function MobileMenu() {
   const [isOpen, { close, open, toggle }] = useDisclosure(false);
   const theme = useMantineTheme();
-  
+
   return (
     <React.Fragment>
       <Burger onClick={toggle} size="sm" />
@@ -102,7 +101,7 @@ function MobileMenu() {
       >
         <Stack gap={0}>
           <Group justify="space-between" p="md" py="sm" pb="xs" className={classes.mobileHeader}>
-            <Link href="/" className={classes.logo} onClick={close}>
+            <a href="/" className={classes.logo} onClick={close}>
               <Image
                 src="/logo-text-dark.svg"
                 alt="DailyPay by Alerts"
@@ -110,7 +109,7 @@ function MobileMenu() {
                 w="auto"
                 fit="contain"
               />
-            </Link>
+            </a>
             <Burger onClick={close} size="sm" />
           </Group>
           <Divider />
@@ -124,20 +123,22 @@ function MobileMenu() {
                 onClick={close}
               >
                 <Group p="md" justify="space-between" className={classes.mobileLink}>
-                  <Text size="sm" fw={500}>{item.label}</Text>
+                  <Text size="sm" fw={500}>
+                    {item.label}
+                  </Text>
                   <IconArrowRight size={16} color={theme.colors.gray[6]} />
                 </Group>
               </a>
               {mainLinks.length - 1 !== index && <Divider />}
             </Box>
           ))}
-          
+
           <Stack px="md" pt="lg" pb="md" gap="sm">
             <Divider mb="sm" />
-            <Button 
-              variant="subtle" 
-              rightSection={<IconLogin size={16} />} 
-              component="a" 
+            <Button
+              variant="subtle"
+              rightSection={<IconLogin size={16} />}
+              component="a"
               href="/login"
               fullWidth
               size="sm"
@@ -146,9 +147,9 @@ function MobileMenu() {
             >
               Login
             </Button>
-            <Button 
-              rightSection={<IconUser size={16} />} 
-              component="a" 
+            <Button
+              rightSection={<IconUser size={16} />}
+              component="a"
               href="/register"
               fullWidth
               size="sm"
