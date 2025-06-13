@@ -20,9 +20,9 @@ import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
 
 const mainLinks = [
-  { link: '/features', label: 'Features' },
+  { link: '/about', label: 'About' },
   { link: '/how-it-works', label: 'How It Works' },
-  { link: '/security', label: 'Security' },
+  { link: '/faq', label: 'FAQ' },
   { link: '/contact', label: 'Contact' },
 ];
 
@@ -103,7 +103,7 @@ function MobileMenu() {
           <Group justify="space-between" p="md" py="sm" pb="xs" className={classes.mobileHeader}>
             <a href="/" className={classes.logo} onClick={close}>
               <Image
-                src="/logo-text-dark.svg"
+                src="/5.png"
                 alt="DailyPay by Alerts"
                 h={32}
                 w="auto"

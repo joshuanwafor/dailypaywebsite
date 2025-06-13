@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Title, Text, Stack, Badge } from '@mantine/core';
+import { Container, Title, Text, Stack, Badge, Box, rem } from '@mantine/core';
 import classes from './PageHeaderSection.module.css';
 
 interface PageHeaderSectionProps {
@@ -13,13 +13,33 @@ export default function PageHeaderSection({ title, caption, badge }: PageHeaderS
   return (
     <div className={classes.header}>
       <Container size="lg">
-        <Stack align="center" py={80} gap={0}>
-          {badge && <Badge variant="filled" size="lg">{badge}</Badge>}
-          <Title className={classes.title} ta="center">
-            {title}
-          </Title>
+        <Stack align="center" py={120} gap="lg">
+          {badge && (
+            <Badge 
+              variant="light" 
+              size="lg" 
+              className={classes.badge}
+              color="#0b4650"
+              radius="md"
+            >
+              {badge}
+            </Badge>
+          )}
+          <Box className={classes.titleContainer}>
+            <Title className={classes.title} ta="center">
+              {title}
+            </Title>
+            <div className={classes.titleUnderline} />
+          </Box>
           {caption && (
-            <Text c="dimmed" ta="center" maw={600} size="lg">
+            <Text 
+              ta="center" 
+              maw={600} 
+              size="lg" 
+              className={classes.caption}
+              lh={1.6}
+              fw={300}
+            >
               {caption}
             </Text>
           )}

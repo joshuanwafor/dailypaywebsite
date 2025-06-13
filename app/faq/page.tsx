@@ -32,74 +32,104 @@ import classes from './page.module.css';
 const faqs = {
   general: [
     {
-      question: 'What is Shopkeeper POS?',
+      question: 'What is DailyPay by Alerts?',
       answer:
-        'Shopkeeper POS is a modern point of sale software designed for retail stores and hospitality businesses. It offers comprehensive features including sales management, inventory control, customer management, and detailed reporting.',
+        'DailyPay by Alerts is a fintech platform that allows Nigerian workers to access their earned wages daily, instead of waiting until month-end. We partner with employers to provide zero-interest early wage access to employees.',
     },
     {
-      question: 'Is Shopkeeper free to use?',
+      question: 'Is DailyPay free to use?',
       answer:
-        "Shopkeeper offers a 14-day free trial period with full functionality. After the trial period, you'll need to purchase a license to continue using the software.",
+        'Yes, DailyPay is completely free for employees. There are no interest charges, hidden fees, or subscription costs. Your employer covers all processing fees.',
     },
     {
-      question: 'Can I use Shopkeeper offline?',
+      question: 'How does DailyPay work?',
       answer:
-        "Yes, Shopkeeper works offline. Internet connection is only required for initial activation and synchronization if you're using multiple devices.",
+        'Once your employer partners with us, you can access up to 50% of your earned wages daily through our mobile app. The accessed amount is automatically deducted from your next salary payment.',
     },
     {
-      question: 'Do you offer technical support?',
+      question: 'Is DailyPay safe and secure?',
       answer:
-        'Yes, we provide technical support through our help center, email, and community forums. Professional license holders get priority support.',
+        'Yes, we use bank-level security protocols, including 256-bit SSL encryption and are fully compliant with Nigerian financial regulations. Your personal and financial data is completely protected.',
+    },
+    {
+      question: 'What happens if I change jobs?',
+      answer:
+        'Your DailyPay account remains active. You can simply update your employment details once your new employer partners with us, or you can close your account at any time.',
+    },
+  ],
+  eligibility: [
+    {
+      question: 'Who can use DailyPay?',
+      answer:
+        'Any Nigerian worker whose employer has partnered with DailyPay can use our service. You must have a valid BVN, bank account, and employment confirmation from your HR department.',
+    },
+    {
+      question: 'Do I need a minimum salary to qualify?',
+      answer:
+        'There\'s no minimum salary requirement. However, you must have worked for at least one complete pay period with your current employer before accessing daily wages.',
+    },
+    {
+      question: 'Can part-time employees use DailyPay?',
+      answer:
+        'Yes, part-time employees can use DailyPay as long as their employer is partnered with us and they meet the basic verification requirements.',
+    },
+    {
+      question: 'What documents do I need to verify my account?',
+      answer:
+        'You need a valid Nigerian ID (National ID, Driver\'s License, or International Passport), BVN, bank account details, and employment verification from your HR department.',
+    },
+  ],
+  limits: [
+    {
+      question: 'How much can I access daily?',
+      answer:
+        'You can access up to 50% of your earned wages for the current pay period. The exact amount depends on your daily earnings and what you\'ve already accessed.',
+    },
+    {
+      question: 'Is there a daily limit?',
+      answer:
+        'The daily limit is based on your earned wages. You cannot access more than what you\'ve actually earned, up to a maximum of 50% of your total monthly salary.',
+    },
+    {
+      question: 'Can I increase my access limit?',
+      answer:
+        'Limits are set based on your salary and employment status. As you build a good history with DailyPay, some limits may be adjusted, but the 50% rule always applies.',
+    },
+    {
+      question: 'What if I need more than my daily limit?',
+      answer:
+        'DailyPay is designed for daily expenses, not large purchases. If you need more than your earned wages, consider traditional lending options or speak with your employer about a salary advance.',
     },
   ],
   technical: [
     {
-      question: 'What are the system requirements?',
+      question: 'Which banks are supported?',
       answer:
-        'Shopkeeper requires Windows 10 or newer, 2GB RAM (4GB recommended), 1024x768 screen resolution, and .NET Framework 4.8.',
+        'We support all major Nigerian banks including GTBank, Access Bank, First Bank, UBA, Zenith Bank, and many others. You can also receive funds through virtual accounts.',
     },
     {
-      question: 'Can I migrate data from another POS system?',
+      question: 'How fast are transfers?',
       answer:
-        'Yes, Shopkeeper supports data import from CSV files. We also offer professional data migration services for seamless transition.',
+        'Transfers are typically instant during business hours (7 AM - 7 PM). Outside business hours, transfers may take up to 2 hours depending on your bank.',
     },
     {
-      question: 'How are updates handled?',
+      question: 'Is there a mobile app?',
       answer:
-        'Shopkeeper automatically checks for updates and notifies you when new versions are available. Updates can be installed with a single click.',
-    },
-  ],
-  payments: [
-    {
-      question: 'Which payment methods are supported?',
-      answer:
-        'Shopkeeper supports cash, credit cards, mobile payments, and custom payment methods. Integration with popular payment processors is available.',
+        'Yes, we have mobile apps for both Android and iOS. You can download them from Google Play Store or Apple App Store by searching "DailyPay by Alerts".',
     },
     {
-      question: 'Can I process split payments?',
+      question: 'What if the app is not working?',
       answer:
-        'Yes, you can split payments between multiple payment methods and handle partial payments easily.',
-    },
-  ],
-  mobile: [
-    {
-      question: 'Is there a mobile app available?',
-      answer:
-        'Yes, Shopkeeper offers mobile apps for both Android and iOS devices, allowing you to manage your business on the go.',
-    },
-    {
-      question: 'How does the mobile app sync with the desktop version?',
-      answer:
-        'The mobile app automatically syncs with your desktop installation when connected to the internet, ensuring data consistency across all devices.',
+        'If you experience technical issues, first try updating the app or restarting your phone. If problems persist, contact our support team at support@dailypay.alerts.com.',
     },
   ],
 };
 
 const categories = [
   { title: 'General', icon: IconQuestionMark, color: 'blue' },
+  { title: 'Eligibility', icon: IconUsers, color: 'green' },
+  { title: 'Limits', icon: IconCreditCard, color: 'violet' },
   { title: 'Technical', icon: IconDeviceLaptop, color: 'teal' },
-  { title: 'Payments', icon: IconCreditCard, color: 'violet' },
-  { title: 'Mobile App', icon: IconDeviceLaptop, color: 'grape' },
 ];
 
 export default function FAQPage() {
@@ -107,7 +137,7 @@ export default function FAQPage() {
     <>
       <PageHeaderSection
         title="Frequently Asked Questions"
-        caption="Find answers to common questions about Shopkeeper POS software"
+        caption="Find answers to common questions about DailyPay services"
         badge="FAQ"
       />
 
@@ -164,16 +194,16 @@ export default function FAQPage() {
                 Still have questions?
               </Text>
               <Text size="sm" c="dimmed" mt={4}>
-                Can't find the answer you're looking for? Contact our support team.
+                Can't find the answer you're looking for? Our support team is here to help.
               </Text>
             </div>
           </Group>
           <Group mt="xl">
-            <Button component="a" href="/contact" size="md">
+            <Button component="a" href="/contact" size="md" bg="#0b4650">
               Contact Support
             </Button>
-            <Button component="a" href="/documentation" variant="light" size="md">
-              View Documentation
+            <Button component="a" href="mailto:support@dailypay.alerts.com" variant="light" size="md" color="#0b4650">
+              Email Us
             </Button>
           </Group>
         </Card>
