@@ -9,8 +9,10 @@
   font-weight: 900;
   color: var(--mantine-color-dark-8);
   margin: var(--mantine-spacing-md) 0;
+}
 
-  @media (max-width: $mantine-breakpoint-sm) {
+@media (max-width: $mantine-breakpoint-sm) {
+  .title {
     font-size: rem(36px);
   }
 }
@@ -19,11 +21,11 @@
   padding: var(--mantine-spacing-xl);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--mantine-shadow-md);
-  }
+.categoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--mantine-shadow-md);
 }
 
 .categoryIcon {
@@ -31,12 +33,22 @@
   box-shadow: var(--mantine-shadow-md);
 }
 
+.categoryItem {
+  padding: var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-md);
+  transition: background-color 0.2s ease;
+}
+
+.categoryItem:hover {
+  background-color: var(--mantine-color-gray-0);
+}
+
 .section {
   margin-bottom: var(--mantine-spacing-xl) * 2;
+}
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+.section:last-child {
+  margin-bottom: 0;
 }
 
 .sectionTitle {
@@ -44,8 +56,10 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: var(--mantine-spacing-md);
+}
 
-  @media (max-width: $mantine-breakpoint-sm) {
+@media (max-width: $mantine-breakpoint-sm) {
+  .sectionTitle {
     font-size: rem(28px);
   }
 }
@@ -53,8 +67,10 @@
 .contactCard {
   background: linear-gradient(to right, var(--mantine-color-gray-0), var(--mantine-color-blue-0));
   padding: calc(var(--mantine-spacing-xl) * 1.5);
+}
 
-  @media (max-width: $mantine-breakpoint-sm) {
+@media (max-width: $mantine-breakpoint-sm) {
+  .contactCard {
     padding: var(--mantine-spacing-xl);
   }
 }
@@ -72,8 +88,11 @@
     var(--mantine-color-red-0)
   );
   padding: calc(var(--mantine-spacing-xl) * 1.5);
+  border: 1px solid var(--mantine-color-red-2);
+}
 
-  @media (max-width: $mantine-breakpoint-sm) {
+@media (max-width: $mantine-breakpoint-sm) {
+  .formCard {
     padding: var(--mantine-spacing-xl);
   }
 }
@@ -82,17 +101,69 @@
   background-color: var(--mantine-color-gray-0);
   padding: calc(var(--mantine-spacing-xl) * 1.5);
   height: 100%;
+  border: 1px solid var(--mantine-color-gray-2);
+}
 
-  @media (max-width: $mantine-breakpoint-sm) {
+@media (max-width: $mantine-breakpoint-sm) {
+  .infoCard {
+    padding: var(--mantine-spacing-xl);
+  }
+}
+
+.helpCard {
+  background: linear-gradient(
+    to right,
+    var(--mantine-color-gray-0),
+    var(--mantine-color-blue-0)
+  );
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+  border: 1px solid var(--mantine-color-blue-2);
+}
+
+@media (max-width: $mantine-breakpoint-sm) {
+  .helpCard {
+    padding: var(--mantine-spacing-xl);
+  }
+}
+
+.legalCard {
+  background: linear-gradient(
+    to right,
+    var(--mantine-color-gray-0),
+    var(--mantine-color-orange-0)
+  );
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+  border: 1px solid var(--mantine-color-orange-2);
+}
+
+@media (max-width: $mantine-breakpoint-sm) {
+  .legalCard {
     padding: var(--mantine-spacing-xl);
   }
 }
 
 .deleteButton {
   transition: all 0.2s ease;
+}
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--mantine-shadow-md);
-  }
+.deleteButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mantine-shadow-md);
+}
+
+.timelineItem {
+  transition: all 0.2s ease;
+}
+
+.timelineItem:hover {
+  transform: translateX(5px);
+}
+
+.alertCard {
+  border-left: 4px solid var(--mantine-color-red-6);
+  background: linear-gradient(
+    to right,
+    var(--mantine-color-red-0),
+    var(--mantine-color-red-1)
+  );
 } 
