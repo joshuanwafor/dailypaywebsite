@@ -52,7 +52,7 @@ export function Footer() {
             <Stack gap="md">
               <Link href="/" className={classes.brandLink}>
                 <Group gap="xs">
-                  <img src="/6.png" alt="Shopkeeper" width={160} />
+                  <img src="/6.png" alt="Alerts africa" width={160} />
                 </Group>
               </Link>
               
@@ -146,8 +146,8 @@ export function Footer() {
                 </Text>
                 <Group gap="sm">
                   <IconMail size={16} color="var(--mantine-color-gray-4)" />
-                  <Link href="mailto:support@dailypay.alerts.com" className={classes.contactLink}>
-                    support@dailypay.alerts.com
+                  <Link href="mailto:support@alerts.africa" className={classes.contactLink}>
+                    support@alerts.africa
                   </Link>
                 </Group>
                 <Group gap="sm">

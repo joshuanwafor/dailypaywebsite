@@ -8,7 +8,7 @@ export default function PolicyPage() {
       <PageHeaderSection
         title="Privacy Policy"
         badge="LEGAL"
-        caption="Privacy policy for Shopkeeper Integrated Services Limited"
+        caption="Privacy policy for DailyPay by Alerts"
       />
       <Container size={'lg'}>
       <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
@@ -20,14 +20,14 @@ export default function PolicyPage() {
 const content = `
 # Privacy Notice
 
-This Privacy Notice for ShopkeeperPOS Limited ("**we**," "**us**," or "**our**"), describes how and why we might access, collect, store, use, and/or share ("**process**") your personal information when you use our services ("**Services**"), including when you:
+This Privacy Notice for DailyPay by Alerts ("**we**," "**us**," or "**our**"), describes how and why we might access, collect, store, use, and/or share ("**process**") your personal information when you use our services ("**Services**"), including when you:
 
-- Visit our website at https://shopkeeperpos.com
-- Download and use our mobile application (ShopkeeperPOS), desktop application, or any other application of ours that links to this Privacy Notice
-- Use ShopkeeperPOS, a point-of-sale platform providing inventory management, sales tracking, expense management, and business analytics for retail businesses
+- Visit our website at https://alerts.africa
+- Download and use our mobile application (DailyPay), or any other application of ours that links to this Privacy Notice
+- Use DailyPay, a fintech platform providing daily wage access, virtual accounts, wallet services, and financial management for the working class African population
 - Engage with us in other related ways, including any sales, marketing, or events
 
-**Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at privacy@shopkeeperpos.com.
+**Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at privacy@alerts.africa.
 
 ## Summary of Key Points
 
@@ -35,7 +35,7 @@ _**This summary provides key points from our Privacy Notice, but you can find ou
 
 - **What personal information do we process?** When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. [Learn more about personal information you disclose to us](#what-information-do-we-collect)
 
-- **Do we process any sensitive personal information?** Some of the information may be considered "special" or "sensitive" in certain jurisdictions, for example business financial records, sales data, expense records, and inventory information. We may process sensitive personal information when necessary with your consent or as otherwise permitted by applicable law. [Learn more about sensitive information we process](#what-information-do-we-collect)
+- **Do we process any sensitive personal information?** Some of the information may be considered "special" or "sensitive" in certain jurisdictions, for example financial records, salary information, bank account details, BVN, NIN, and employment verification data. We may process sensitive personal information when necessary with your consent or as otherwise permitted by applicable law. [Learn more about sensitive information we process](#what-information-do-we-collect)
 
 - **Do we collect any information from third parties?** We may collect limited information from third-party services when you connect your account to these services or import data from other platforms.
 
@@ -79,26 +79,31 @@ We collect personal information that you voluntarily provide to us when you regi
 - names
 - phone numbers
 - email addresses
-- business addresses
+- residential addresses
 - usernames
 - passwords
 - contact preferences
 - contact or authentication data
-- billing addresses
-- debit/credit card numbers
-- business information (store details, product catalog, employee information)
+- bank account details
+- BVN (Bank Verification Number)
+- NIN (National Identification Number)
+- employment information (employer details, role, salary, duration)
+- HR contact information
+- government identification documents
 
 **Sensitive Information.** When necessary, with your consent or as otherwise permitted by applicable law, we process the following categories of sensitive information:
 
-- business financial records (sales data, revenue information)
-- expense records (receipts, vendor payments, operational costs)
-- inventory information
-- customer purchase history
-- employee work schedules and access permissions
+- financial records (salary information, bank statements, transaction history)
+- employment verification data (employer details, salary confirmation, HR approvals)
+- government identification documents (passport, driver's license, national ID)
+- BVN and NIN verification data
+- daily wage earnings and claims data
+- virtual account and wallet transaction records
 
-**Payment Data.** We may collect data necessary to process your payment if you choose to make purchases or subscribe to our Services, such as your payment instrument number, and the security code associated with your payment instrument. All payment data is stored and processed by our payment processors. You may find their privacy notice link(s) here: 
-- Stripe: https://stripe.com/privacy
-- PayPal: https://www.paypal.com/us/legalhub/privacy-full
+**Payment Data.** We may collect data necessary to process your daily wage claims and transfers, such as your bank account details, virtual account information, and transaction records. All payment data is stored and processed by our secure payment processors and banking partners. You may find their privacy notice link(s) here: 
+- Paystack: https://paystack.com/privacy
+- Flutterwave: https://flutterwave.com/privacy
+- Interswitch: https://interswitchgroup.com/privacy
 
 **Social Media Login Data.** We may provide you with the option to register with us using your existing social media account details, like your Facebook, Google, or other social media account. If you choose to register in this way, we will collect certain profile information about you from the social media provider, as described in the section called "HOW DO WE HANDLE YOUR SOCIAL LOGINS?" below.
 
@@ -107,7 +112,7 @@ We collect personal information that you voluntarily provide to us when you regi
 - Geolocation Information. We may request access or permission to track location-based information from your mobile device, either continuously or while you are using our application(s), to provide certain location-based services. If you wish to change our access or permissions, you may do so in your device's settings.
 - Mobile and Desktop Device Data. We automatically collect device information (such as your mobile device ID, model, and manufacturer or desktop operating system and version), operating system, version information and system configuration information, device and application identification numbers, browser type and version, hardware model Internet service provider and/or mobile carrier, and Internet Protocol (IP) address (or proxy server). If you are using our application(s), we may also collect information about the phone network associated with your mobile device, your mobile device's operating system or platform, the type of mobile device you use, your mobile device's unique device ID, and information about the features of our application(s) you accessed.
 - Push Notifications. We may request to send you push notifications regarding your account or certain features of the application(s). If you wish to opt out from receiving these types of communications, you may turn them off in your device's settings.
-- Data Import Information. If you choose to import data from other POS systems or business software, we collect the information you choose to import.
+- Data Import Information. If you choose to link your existing bank account for employment verification, we collect the information you choose to provide for income verification purposes.
 
 This information is primarily needed to maintain the security and operation of our application(s), for troubleshooting, and for our internal analytics and reporting purposes.
 
@@ -127,18 +132,17 @@ The information we collect includes:
 - Device Data. We collect device data such as information about your computer, phone, tablet, or other device you use to access the Services. Depending on the device used, this device data may include information such as your IP address (or proxy server), device and application identification numbers, location, browser type, hardware model, Internet service provider and/or mobile carrier, operating system, and system configuration information.
 - Location Data. We collect location data such as information about your device's location, which can be either precise or imprecise. How much information we collect depends on the type and settings of the device you use to access the Services. For example, we may use GPS and other technologies to collect geolocation data that tells us your current location (based on your IP address). You can opt out of allowing us to collect this information either by refusing access to the information or by disabling your Location setting on your device. However, if you choose to opt out, you may not be able to use certain aspects of the Services.
 
-**Business Data**
+**Financial Data**
 
-We collect and process business operation data when you use our POS system. This includes:
-- Inventory records
-- Sales transactions
-- Expense tracking data
-- Vendor information
-- Purchase orders
-- Customer purchase patterns (anonymized)
-- Employee work logs
-- Business analytics data
-- Receipt information
+We collect and process financial and employment data when you use our DailyPay platform. This includes:
+- Daily wage earnings records
+- Salary information and employment verification
+- Bank account transaction history (for verification purposes)
+- Virtual account and wallet balances
+- Transfer and transaction records
+- Employment status and HR approval data
+- KYC verification documents and status
+- Daily wage claim history
 
 ## 2. How Do We Process Your Information?<a id="how-do-we-process-your-information"></a>
 
@@ -147,7 +151,7 @@ _In Short: We process your information to provide, improve, and administer our S
 We process your personal information for a variety of reasons, depending on how you interact with our Services, including:
 
 - To facilitate account creation and authentication and otherwise manage user accounts. We may process your information so you can create and log in to your account, as well as keep your account in working order.
-- To deliver and facilitate delivery of services to the user. We may process your information to provide you with the requested service, including point-of-sale functionality, inventory management, expense tracking, employee management, and business analytics.
+- To deliver and facilitate delivery of services to the user. We may process your information to provide you with the requested service, including daily wage access, virtual account management, wallet services, transfer functionality, and financial management tools.
 - To respond to user inquiries/offer support to users. We may process your information to respond to your inquiries and solve any potential issues you might have with the requested service.
 - To send administrative information to you. We may process your information to send you details about our products and services, changes to our terms and policies, and other similar information.
 - To fulfill and manage your subscriptions. We may process your information to fulfill and manage your subscriptions, payments, renewals, and feature access.
@@ -159,8 +163,9 @@ We process your personal information for a variety of reasons, depending on how 
 - To evaluate and improve our Services, products, marketing, and your experience. We may process your information when we believe it is necessary to identify usage trends, determine the effectiveness of our promotional campaigns, and to evaluate and improve our Services, products, marketing, and your experience.
 - To identify usage trends. We may process information about how you use our Services to better understand how they are being used so we can improve them.
 - To comply with our legal obligations. We may process your information to comply with our legal obligations, respond to legal requests, and exercise, establish, or defend our legal rights.
-- To generate business insights and analytics. We may process your sales, inventory, and expense data to provide you with business intelligence tools and reports to help optimize your operations and financial management.
-- To facilitate tax preparation and financial reporting. We may process your transaction and expense data to help generate reports necessary for tax filings and financial statements.
+- To generate financial insights and analytics. We may process your daily wage earnings, transaction data, and financial patterns to provide you with insights into your financial management and spending habits.
+- To facilitate employment verification and KYC processes. We may process your employment information, bank statements, and identification documents to verify your eligibility for daily wage access and comply with regulatory requirements.
+- To manage HR approvals and employer communications. We may process your employment details to facilitate communication with your HR department or employer for approval of daily wage services.
 
 ## 3. When and With Whom Do We Share Your Personal Information?<a id="when-and-with-whom-do-we-share-your-personal-information"></a>
 
@@ -173,14 +178,12 @@ The third parties we may share personal information with are as follows:
 - Allow Users to Connect to Their Third-Party Accounts
   - Google account
   - Microsoft account
-  - QuickBooks
-  - Xero
-  - Wave Accounting
-- Invoice and Billing
-  - Stripe
-  - PayPal
-  - Square
+  - Banking institutions for employment verification
+- Payment Processing and Banking
   - Paystack
+  - Flutterwave
+  - Interswitch
+  - Nigerian banks for virtual accounts
 - Cloud Data Storage
   - Amazon Web Services (AWS)
   - Microsoft Azure
@@ -194,8 +197,9 @@ We also may need to share your personal information in the following situations:
 
 - Business Transfers. We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
 - When we use Google Maps Platform APIs. We may share your information with certain Google Maps Platform APIs (e.g., Google Maps API, Places API). We use certain Google Maps Platform APIs to retrieve certain information when you make location-specific requests. This includes location data and other similar information. A full list of what we use information for can be found in this section and in the previous section titled "HOW DO WE PROCESS YOUR INFORMATION?" Google Maps uses GPS, Wi-Fi, and cell towers to estimate your location. This data helps provide accurate location services for your business. We obtain and store on your device ("cache") your location for 30 days. You may revoke your consent anytime by contacting us at the contact details provided at the end of this document.
-- Business Partners. We may share your information with our business partners to offer you certain products, services, or promotions that may enhance your use of our POS system.
-- Tax and Accounting Professionals. With your consent, we may share your business transaction data, including expense records, with your authorized tax preparers or accountants to facilitate tax preparation and financial statement creation.
+- Business Partners. We may share your information with our business partners to offer you certain products, services, or promotions that may enhance your use of our DailyPay platform.
+- Employers and HR Departments. With your consent and as part of the daily wage approval process, we may share your employment information with your employer's HR department or relevant personnel to verify your employment status and salary information.
+- Banking Partners. We may share your information with our banking partners to facilitate virtual account creation, transfers, and other financial services.
 
 ## 4. Do We Use Cookies and Other Tracking Technologies?<a id="do-we-use-cookies-and-other-tracking-technologies"></a>
 
@@ -225,7 +229,7 @@ We will use the information we receive only for the purposes that are described 
 
 We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements). No purpose in this notice will require us to keep your personal information for longer than the period of time in which users have an active account with us.
 
-For business data such as sales transactions, expense records, inventory records, and employee logs, we retain this information for at least seven (7) years to comply with various business and tax regulations. You may request earlier deletion of certain information where not restricted by legal requirements.
+For financial data such as daily wage transactions, salary information, employment verification records, and KYC documents, we retain this information for at least seven (7) years to comply with various financial, employment, and regulatory requirements. You may request earlier deletion of certain information where not restricted by legal requirements.
 
 When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize such information, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible.
 
@@ -264,9 +268,9 @@ If you would at any time like to review or change the information in your accoun
 - Log in to your account settings and update your user account information
 - Contact us using the contact information provided
 
-Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases. However, we may retain some information in our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce our legal terms and/or comply with applicable legal requirements. Business data required for legal and tax purposes, including expense records, may be retained for the required statutory periods even after account closure.
+Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases. However, we may retain some information in our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce our legal terms and/or comply with applicable legal requirements. Financial data required for legal and regulatory purposes, including daily wage records and employment verification data, may be retained for the required statutory periods even after account closure.
 
-If you have questions or comments about your privacy rights, you may email us at support@shopkeeperpos.com.
+If you have questions or comments about your privacy rights, you may email us at support@alerts.africa.
 
 ## 9. Controls for Do-Not-Track Features<a id="controls-for-do-not-track-features"></a>
 
@@ -280,12 +284,10 @@ We may update this Privacy Notice from time to time. The updated version will be
 
 ## 11. How Can You Contact Us About This Notice?<a id="how-can-you-contact-us-about-this-notice"></a>
 
-If you have questions or comments about this notice, you may email us at privacy@shopkeeperpos.com or contact us by post at:
+If you have questions or comments about this notice, you may email us at privacy@alerts.africa or contact us by post at:
 
-ShopkeeperPOS Limited  
-No 24 Main Market,
-Jos, Plateau State
-Nigeria
+DailyPay by Alerts  
+Lagos, Nigeria
 
 ## 12. How Can You Review, Update, or Delete the Data We Collect From You?<a id="how-can-you-review-update-or-delete-the-data-we-collect-from-you"></a>
 
@@ -293,8 +295,8 @@ You have the right to request access to the personal information we collect from
 
 These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, please submit a request by:
 
-- Visiting our website at: https://shopkeeperpos.com
-- Emailing us at: privacy@shopkeeperpos.com
-- Calling us at: +2348105282151
+- Visiting our website at: https://alerts.africa
+- Emailing us at: privacy@alerts.africa
+- Contacting us through our mobile application
 
 We will respond to your request within 30 days.`;

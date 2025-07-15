@@ -34,45 +34,45 @@ import classes from './page.module.css';
 const guides = [
   {
     title: 'Getting Started',
-    description: 'Learn the basics of setting up and using Shopkeeper POS',
+    description: 'Learn the basics of setting up and using DailyPay',
     icon: IconRocket,
     color: 'blue',
     link: '/docs/getting-started'
   },
   {
-    title: 'Installation Guide',
-    description: 'Step-by-step installation instructions',
+    title: 'Account Setup',
+    description: 'Complete KYC and employment verification',
     icon: IconDownload,
     color: 'teal',
-    link: '/docs/installation'
+    link: '/docs/account-setup'
   },
   {
-    title: 'Configuration',
-    description: 'Configure your POS system settings',
+    title: 'Daily Wage Access',
+    description: 'How to claim and manage your daily wages',
     icon: IconTools,
     color: 'violet',
-    link: '/docs/configuration'
+    link: '/docs/daily-wage-access'
   },
   {
-    title: 'Store Management',
-    description: 'Learn about products, categories, and inventory',
+    title: 'Virtual Accounts',
+    description: 'Understanding your virtual account and wallet',
     icon: IconBuildingStore,
     color: 'indigo',
-    link: '/docs/store-management'
+    link: '/docs/virtual-accounts'
   },
   {
-    title: 'Sales & Payments',
-    description: 'Handle transactions and payment processing',
+    title: 'Transfers & Payments',
+    description: 'Transfer funds to your linked bank accounts',
     icon: IconReceipt,
     color: 'grape',
-    link: '/docs/sales'
+    link: '/docs/transfers'
   },
   {
-    title: 'Reports & Analytics',
-    description: 'Generate and understand business reports',
+    title: 'Employment Verification',
+    description: 'HR approval process and requirements',
     icon: IconChartBar,
     color: 'cyan',
-    link: '/docs/reports'
+    link: '/docs/employment-verification'
   }
 ];
 
@@ -93,7 +93,7 @@ const supportChannels = [
   },
   {
     title: 'Community Forum',
-    description: 'Connect with other Shopkeeper users',
+    description: 'Connect with other DailyPay users',
     icon: IconUsers,
     color: 'teal',
     link: '/community'
@@ -118,13 +118,13 @@ export default function HelpPage() {
               How can we help you?
             </Title>
             <Text c="dimmed" ta="center" maw={600} size="lg">
-              Find guides, tutorials, and answers to common questions
+              Find guides, tutorials, and answers about daily wage access and financial services
             </Text>
             <TextInput
               className={classes.search}
               size="lg"
               radius="md"
-              placeholder="Search for guides and tutorials..."
+              placeholder="Search for guides about daily wages, KYC, transfers..."
               leftSection={<IconSearch style={{ width: rem(18), height: rem(18) }} stroke={1.5} />}
             />
           </Stack>
@@ -211,7 +211,7 @@ export default function HelpPage() {
             <div>
               <Text fz="xl" fw={500}>Can't find what you're looking for?</Text>
               <Text size="sm" c="dimmed" mt={4} maw={500}>
-                Our support team is here to help. Contact us directly and we'll get back to you as soon as possible.
+                Our support team is here to help with your daily wage access, KYC verification, and financial services. Contact us directly and we'll get back to you as soon as possible.
               </Text>
               <Group mt="md">
                 <Button component="a" href="/contact">

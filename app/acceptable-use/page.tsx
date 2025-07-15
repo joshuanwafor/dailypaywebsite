@@ -8,7 +8,7 @@ export default function AcceptableUse() {
       <PageHeaderSection
         title="Acceptable Use"
         badge="Legal"
-        caption="Last updated September 19, 2024"
+        caption="Last updated December 2024"
       />
       <Container size="lg">
         <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
@@ -45,7 +45,7 @@ Please carefully review this Policy which applies to any and all:
 
 ## Who We Are
 
-We are Shopkeeper Integrated Services Limited ('**Company**','**we**', '**us**', or '**our**') a company registered in Nigeria at No. 24 Main market, Jos Plateau State. We operate the website [https://shopkeeperpro.com](https://Shopkeeperprop.com)(the '**Site**'), the mobile application Shopkeeper (the 'App'), as well as any other related products and services that refer or link to this Policy (collectively, the '**Services**').
+We are DailyPay by Alerts ('**Company**','**we**', '**us**', or '**our**') a company registered in Nigeria at Lagos, Nigeria. We operate the website [https://alerts.africa](https://alerts.africa)(the '**Site**'), the mobile application DailyPay (the 'App'), as well as any other related products and services that refer or link to this Policy (collectively, the '**Services**').
 
 <br />
 ## USE OF THE SERVICES
@@ -77,6 +77,12 @@ You also acknowledge that you may not:
 - Use the Services in a manner inconsistent with any applicable laws or regulations.
 - Use a buying agent or purchasing agent to make purchases on the Services.
 - Sell or otherwise transfer your profile.
+- Provide false employment information or attempt to bypass employment verification processes.
+- Use the Services for money laundering, fraud, or other illegal financial activities.
+- Attempt to claim daily wages without valid employment or salary verification.
+- Share account credentials or allow unauthorized access to your DailyPay account.
+- Use the Services to facilitate unauthorized salary account switching without employer approval.
+- Attempt to manipulate or falsify daily wage earnings or claims.
 
   <br />
 
@@ -85,7 +91,7 @@ You also acknowledge that you may not:
 In this Policy, the term 'Contribution' means:
 
 - any data, information, software, text, code, music, scripts, sound, graphics, photos, videos, tags, messages, interactive features, or other materials that you post, share, upload, submit, or otherwise provide in any manner on or through to the Services; or
-- any other content, materials, or data you provide to Shopkeeper Integrated Services Limited or use with the Services.
+- any other content, materials, or data you provide to DailyPay by Alerts or use with the Services.
 
 Some areas of the Services may allow users to upload, transmit, or post Contributions. We may but are under no obligation to review or moderate the Contributions made on the Services, and we expressly exclude our liability for any loss or damage resulting from any of our users' breach of this Policy. Please report any Contribution that you believe breaches this Policy; however, we will determine, in our sole discretion, whether a Contribution is indeed in breach of this Policy.
 
@@ -123,8 +129,12 @@ You may not use our Services to offer, present, promote, sell, give away or othe
 - certain sexually oriented materials or services,
 - certain items before the seller has control or possession of the item,
 - stolen goods,
-- products or services identified by government agencies to be highly likely to be fraudulent, and
-- any transaction or activity that requires pre-approval without having obtained said approval.
+- products or services identified by government agencies to be highly likely to be fraudulent,
+- any transaction or activity that requires pre-approval without having obtained said approval,
+- unauthorized financial services or money transfer operations,
+- fraudulent employment verification services,
+- fake KYC or identity verification services, and
+- any service that violates banking or financial regulations.
 
 <br />
 ## Review and Ratings
@@ -145,8 +155,8 @@ We may but are under no obligation to review or moderate the Contributions made 
 
 If you consider that any Service, Content, or Contribution:
 
-- breach this Policy, please call 08024568200, email us at contact@shopkeeperpro.com, or refer to the contact details at the bottom of this document to let us know which Service, Content, or Contribution is in breach of this Policy and why
-- infringe any third-party intellectual property rights, please email us at contact@shopkeeperpro.com
+- breach this Policy, please email us at support@alerts.africa, or refer to the contact details at the bottom of this document to let us know which Service, Content, or Contribution is in breach of this Policy and why
+- infringe any third-party intellectual property rights, please email us at support@alerts.africa
 
 We will reasonably determine whether a Service, Content, or Contribution breaches this Policy.
 
@@ -168,7 +178,7 @@ If you consider that some Content or Contribution have been mistakenly removed o
 <br />
 ## Disclaimer
 
-Shopkeeper Integrated Services Limited is under no obligation to monitor users' activities, and we disclaim any responsibility for any user's misuse of the Services. Shopkeeper Integrated Services Limited has no responsibility for any user or other Content or Contribution created, maintained, stored, transmitted, or accessible on or through the Services, and is not obligated to monitor or exercise any editorial control over such material. If Shopkeeper Integrated Services Limited becomes aware that any such Content or Contribution violates this Policy, Shopkeeper Integrated Services Limited may, in addition to removing such Content or Contribution and blocking your account, report such breach to the police or appropriate regulatory authority. Unless otherwise stated in this Policy, Shopkeeper Integrated Services Limited disclaims any obligation to any person who has not entered into an agreement with Shopkeeper Integrated Services Limited for the use of the Services.
+DailyPay by Alerts is under no obligation to monitor users' activities, and we disclaim any responsibility for any user's misuse of the Services. DailyPay by Alerts has no responsibility for any user or other Content or Contribution created, maintained, stored, transmitted, or accessible on or through the Services, and is not obligated to monitor or exercise any editorial control over such material. If DailyPay by Alerts becomes aware that any such Content or Contribution violates this Policy, DailyPay by Alerts may, in addition to removing such Content or Contribution and blocking your account, report such breach to the police or appropriate regulatory authority. Unless otherwise stated in this Policy, DailyPay by Alerts disclaims any obligation to any person who has not entered into an agreement with DailyPay by Alerts for the use of the Services.
 
 <br />
 ## How Can You Contact Us About This Policy?
@@ -176,7 +186,7 @@ Shopkeeper Integrated Services Limited is under no obligation to monitor users' 
 If you have any further questions or comments or wish to report any problematic Content or Contribution, you may contact us by:
 
 <ul className="no-bullets">
-  <li>Phone: 08024568200</li>
-  <li>Email: contact@shopkeeperpro.com</li>
+  <li>Email: support@alerts.africa</li>
+  <li>Mobile Application: Through our DailyPay mobile app</li>
 </ul>
 `;

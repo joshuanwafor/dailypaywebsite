@@ -8,7 +8,7 @@ export default function Terms() {
       <PageHeaderSection
         title="Terms and Conditions"
         badge="Legal"
-        caption="Last updated September 19, 2024"
+        caption="Last updated December 2024"
       />
       <Container size="lg">
       <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
@@ -20,23 +20,20 @@ export default function Terms() {
 const content = `
 # AGREEMENT TO OUR LEGAL TERMS
 
-We are **Shopkeeper** ('**Company**', '**we**', '**us**', or '**our**'), a company registered in Nigeria at ** ShopkeeperPOS Limited  
-No. 24 Main market, Jos
-Plateau State**.
+We are **DailyPay by Alerts** ('**Company**', '**we**', '**us**', or '**our**'), a company registered in Nigeria at **DailyPay by Alerts  
+Lagos, Nigeria**.
 
-We operate the website [https://shopkeeperpos.com](https://shopkeeperpos.com) (the '**Site**'), the mobile application **Shopkeeper POS** (the '**App**'), as well as any other related products and services that refer or link to these legal terms (the '**Legal Terms**') (collectively, the '**Services**').
+We operate the website [https://alerts.africa](https://alerts.africa) (the '**Site**'), the mobile application **DailyPay** (the '**App**'), as well as any other related products and services that refer or link to these legal terms (the '**Legal Terms**') (collectively, the '**Services**').
 
-**Shopkeeper POS** is a point of sale platform that enables businesses to manage sales, inventory, and customer relationships with integrated payment processing capabilities.
+**DailyPay by Alerts** is a fintech platform that enables working class African population to access their earned wages on a daily basis, providing virtual accounts, wallet services, and financial management tools.
 
-You can contact us by phone at **+234 802 456 8200**, email at **contact@shopkeeperpos.com**, or by mail to ** ShopkeeperPOS Limited  
-No. 24 Main market, Jos
-Plateau State**.
+You can contact us by email at **support@alerts.africa**, or through our mobile application.
 
-These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ('you'), and ** ShopkeeperPOS Limited**, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. **IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.**
+These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ('you'), and **DailyPay by Alerts**, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. **IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.**
 
-We will provide you with prior notice of any scheduled changes to the Services you are using. The modified Legal Terms will become effective upon posting or notifying you by **contact@shopkeeperpos.com**, as stated in the email message. By continuing to use the Services after the effective date of any changes, you agree to be bound by the modified terms.
+We will provide you with prior notice of any scheduled changes to the Services you are using. The modified Legal Terms will become effective upon posting or notifying you by **support@alerts.africa**, as stated in the email message. By continuing to use the Services after the effective date of any changes, you agree to be bound by the modified terms.
 
-The Services are intended for users who are at least **13 years of age**. All users who are minors in the jurisdiction in which they reside (generally under the age of 18) must have the permission of, and be directly supervised by, their parent or guardian to use the Services. If you are a minor, you must have your parent or guardian read and agree to these Legal Terms prior to you using the Services.
+The Services are intended for users who are at least **18 years of age** and are legally employed. All users must have the legal capacity to enter into financial agreements and must be employed by a recognized employer (private company or government institution) to qualify for daily wage access services. If you are under 18, you must have your parent or guardian read and agree to these Legal Terms prior to you using the Services.
 
 We recommend that you print a copy of these Legal Terms for your records.
 
@@ -46,9 +43,9 @@ We recommend that you print a copy of these Legal Terms for your records.
 2. [INTELLECTUAL PROPERTY RIGHTS](#intellectual-property-rights)
 3. [USER REPRESENTATIONS](#user-representations)
 4. [USER REGISTRATION](#user-registration)
-5. [PRODUCTS](#products)
-6. [PURCHASES AND PAYMENT](#purchases-and-payment)
-7. [RETURN POLICY](#return-policy)
+5. [DAILY WAGE SERVICES](#daily-wage-services)
+6. [FINANCIAL TRANSACTIONS](#financial-transactions)
+7. [EMPLOYMENT VERIFICATION](#employment-verification)
 8. [PROHIBITED ACTIVITIES](#prohibited-activities)
 9. [USER GENERATED CONTRIBUTIONS](#user-generated-contributions)
 10. [CONTRIBUTION LICENCE](#contribution-licence)
@@ -92,7 +89,7 @@ Subject to your compliance with these Legal Terms, including the '[PROHIBITED AC
 
 Except as set out in this section or elsewhere in our Legal Terms, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.
 
-If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: **contact@shopkeeperpos.com**. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.
+If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: **support@alerts.africa**. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.
 
 We reserve all rights not expressly granted to you in and to the Services, Content, and Marks.
 
@@ -129,28 +126,77 @@ If you provide any information that is untrue, inaccurate, not current, or incom
 
 You may be required to register to use the Services. You agree to keep your password confidential and will be responsible for all use of your account and password. We reserve the right to remove, reclaim, or change a username you select if we determine, in our sole discretion, that such username is inappropriate, obscene, or otherwise objectionable.
 
-## 5. PRODUCTS <a id="products"></a>
+## 5. DAILY WAGE SERVICES <a id="daily-wage-services"></a>
 
-We make every effort to display as accurately as possible the colours, features, specifications, and details of the products available on the Services. However, we do not guarantee that the colours, features, specifications, and details of the products will be accurate, complete, reliable, current, or free of other errors, and your electronic display may not accurately reflect the actual colours and details of the products. All products are subject to availability, and we cannot guarantee that items will be in stock. We reserve the right to discontinue any products at any time for any reason. Prices for all products are subject to change.
+DailyPay by Alerts provides daily wage access services to eligible employed individuals. Our services include:
 
-## 6. PURCHASES AND PAYMENT <a id="purchases-and-payment"></a>
+- **Daily Wage Access**: Access to earned wages on a daily basis with zero interest
+- **Virtual Accounts**: Dedicated virtual accounts for salary deposits
+- **Wallet Services**: Digital wallet for managing daily wage claims and transfers
+- **Transfer Services**: Ability to transfer funds to linked bank accounts
+- **Employment Verification**: KYC and employment verification processes
 
-We accept the following forms of payment:
+Eligibility for daily wage services requires:
+- Valid employment with a recognized employer (private company or government institution)
+- Successful completion of KYC verification (BVN, NIN, government ID)
+- HR or employer approval for salary account switching
+- Consistent employment and salary verification
 
-- Visa
-- Mastercard
-- Paystack
-- Wallet
+We reserve the right to modify, suspend, or discontinue any of these services at any time for any reason, including regulatory requirements or business decisions.
 
-You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Services. You further agree to promptly update account and payment information, including email address, payment method, and payment card expiration date, so that we can complete your transactions and contact you as needed. Sales tax will be added to the price of purchases as deemed required by us. We may change prices at any time. All payments shall be in NGN.
+## 6. FINANCIAL TRANSACTIONS <a id="financial-transactions"></a>
 
-You agree to pay all charges at the prices then in effect for your purchases and any applicable shipping fees, and you authorize us to charge your chosen payment provider for any such amounts upon placing your order. We reserve the right to correct any errors or mistakes in pricing, even if we have already requested or received payment.
+### Daily Wage Claims and Transfers
 
-We reserve the right to refuse any order placed through the Services. We may, in our sole discretion, limit or cancel quantities purchased per person, per household, or per order. These restrictions may include orders placed by or under the same customer account, the same payment method, and/or orders that use the same billing or shipping address. We reserve the right to limit or prohibit orders that, in our sole judgement, appear to be placed by dealers, resellers, or distributors.
+DailyPay by Alerts facilitates financial transactions including daily wage claims and transfers to linked bank accounts. By using our financial services, you agree to:
 
-## 7. RETURN POLICY <a id="return-policy"></a>
+- Provide accurate and complete bank account information for transfers
+- Maintain sufficient funds in your DailyPay wallet for claimed amounts
+- Pay applicable transaction fees as determined by DailyPay
+- Comply with all applicable banking and financial regulations
 
-Please review our Return Policy posted on the Services prior to making any purchases.
+### Transaction Processing
+
+- **Daily Wage Claims**: Claims are processed within 24 hours of submission, subject to available balance and verification
+- **Bank Transfers**: Transfers to linked bank accounts are processed within 1-3 business days
+- **Transaction Limits**: Daily and monthly transaction limits may apply as determined by regulatory requirements
+- **Fees**: DailyPay charges may apply to claims and transfers as determined by our fee schedule
+
+### Payment Methods
+
+We support the following payment and transfer methods:
+- Virtual account deposits
+- Bank transfers to linked accounts
+- DailyPay wallet transactions
+
+All transactions are processed in Nigerian Naira (NGN) and are subject to applicable banking regulations and our internal policies.
+
+## 7. EMPLOYMENT VERIFICATION <a id="employment-verification"></a>
+
+### KYC Requirements
+
+To use DailyPay services, you must complete our Know Your Customer (KYC) verification process, which includes:
+
+- **BVN Verification**: Valid Bank Verification Number
+- **NIN Verification**: Valid National Identification Number
+- **Government ID**: International Passport, Driver's License, or other recognized identification
+- **Employment Verification**: Proof of current employment and salary information
+
+### Employer Approval Process
+
+For daily wage services, we require approval from your employer:
+
+- **Private Company Employees**: HR department approval via email verification
+- **Government Workers**: Finance/Account Department approval via email verification
+- **Salary Account Switching**: Employer must confirm salary payments will be made to DailyPay virtual accounts
+
+### Verification Timeline
+
+- KYC verification typically takes 2-3 business days
+- Employer approval process may take 5-10 business days
+- Account activation occurs upon successful completion of all verification steps
+
+You agree to provide accurate employment information and authorize us to contact your employer for verification purposes. False or misleading information may result in account suspension or termination.
 
 ## 8. PROHIBITED ACTIVITIES <a id="prohibited-activities"></a>
 
@@ -181,6 +227,10 @@ As a user of the Services, you agree not to:
 - Make any unauthorized use of the Services, including collecting usernames and/or email addresses of users by electronic or other means for the purpose of sending unsolicited email, or creating user accounts by automated means or under false pretences.
 - Use the Services as part of any effort to compete with us or otherwise use the Services and/or the Content for any revenue-generating endeavor or commercial enterprise.
 - Sell or otherwise transfer your profile.
+- Provide false employment information or attempt to bypass employment verification processes.
+- Use the Services for money laundering, fraud, or other illegal financial activities.
+- Attempt to claim daily wages without valid employment or salary verification.
+- Share account credentials or allow unauthorized access to your DailyPay account.
 
 ## 9. USER GENERATED CONTRIBUTIONS <a id="user-generated-contributions"></a>
 
@@ -302,7 +352,7 @@ We cannot guarantee the Services will be available at all times. We may experien
 
 ## 19. GOVERNING LAW <a id="governing-law"></a>
 
-These Legal Terms shall be governed by and defined following the laws of Nigeria.  ShopkeeperPOS Limited and yourself irrevocably consent that the courts of Nigeria shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these Legal Terms.
+These Legal Terms shall be governed by and defined following the laws of Nigeria. DailyPay by Alerts and yourself irrevocably consent that the courts of Nigeria shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these Legal Terms.
 
 ## 20. DISPUTE RESOLUTION <a id="dispute-resolution"></a>
 
@@ -381,7 +431,7 @@ Please be aware that message and data rates may apply to any SMS messages sent o
 
 ### Support
 
-If you have any questions or need assistance regarding our SMS communications, please email us at contact@shopkeeperpro.com or call at +234 813 060 3447.
+If you have any questions or need assistance regarding our SMS communications, please email us at support@alerts.africa or contact us through our mobile application.
 
 ## 28. MISCELLANEOUS <a id="miscellaneous"></a>
 
@@ -391,10 +441,7 @@ These Legal Terms and any policies or operating rules posted by us on the Servic
 
 In order to resolve a complaint regarding the Services or to receive further information regarding the use of the Services, please contact us at:
 
-**ShopkeeperPOS Limited**  
-No. 24 Main market, 
-Jos Plateau State,
-Nigeria  
-Phone: +2348105282151
-contact@shopkeeperpos.com
+**DailyPay by Alerts**  
+Lagos, Nigeria  
+Email: support@alerts.africa
 `;

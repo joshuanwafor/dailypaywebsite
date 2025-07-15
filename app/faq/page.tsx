@@ -120,7 +120,7 @@ const faqs = {
     {
       question: 'What if the app is not working?',
       answer:
-        'If you experience technical issues, first try updating the app or restarting your phone. If problems persist, contact our support team at support@dailypay.alerts.com.',
+        'If you experience technical issues, first try updating the app or restarting your phone. If problems persist, contact our support team at support@alerts.africa.',
     },
   ],
 };
@@ -202,7 +202,7 @@ export default function FAQPage() {
             <Button component="a" href="/contact" size="md" bg="#0b4650">
               Contact Support
             </Button>
-            <Button component="a" href="mailto:support@dailypay.alerts.com" variant="light" size="md" color="#0b4650">
+            <Button component="a" href="mailto:support@alerts.africa" variant="light" size="md" color="#0b4650">
               Email Us
             </Button>
           </Group>
