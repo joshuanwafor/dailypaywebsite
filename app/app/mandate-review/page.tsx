@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import {
   IconArrowRight,
@@ -68,7 +68,7 @@ import {
 import PageHeaderSection from '@/components/Sections/PageHeaderSection';
 import { dailypayResource } from '@/config/sdk';
 
-export default function HrApprovalPage() {
+function HrApprovalContent() {
   const [isApproved, setIsApproved] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -600,5 +600,23 @@ export default function HrApprovalPage() {
 
       <SuccessModal />
     </>
+  );
+}
+
+function LoadingFallback() {
+  return (
+    <Container size="lg" py={80}>
+      <Stack align="center" gap="lg">
+        <Text>Loading...</Text>
+      </Stack>
+    </Container>
+  );
+}
+
+export default function HrApprovalPage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <HrApprovalContent />
+    </Suspense>
   );
 }
