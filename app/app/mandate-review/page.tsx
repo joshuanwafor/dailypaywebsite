@@ -1,36 +1,18 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import {
-  IconArrowRight,
-  IconAward,
   IconBriefcase,
   IconBuilding,
-  IconBusinessplan,
-  IconCalendar,
   IconCalendarTime,
-  IconCashBanknote,
   IconCheck,
-  IconChevronRight,
   IconCircleCheck,
-  IconClock,
-  IconCreditCard,
   IconCurrency,
-  IconDeviceAnalytics,
-  IconHeart,
-  IconIdBadge2,
   IconInfoCircle,
-  IconLock,
   IconMail,
   IconMapPin,
-  IconPhone,
-  IconShield,
-  IconStar,
-  IconTarget,
-  IconTrendingUp,
   IconUser,
-  IconUsers,
   IconWallet,
 } from '@tabler/icons-react';
 import {
@@ -95,17 +77,17 @@ function HrApprovalContent() {
       try {
         const decodedData = atob(data);
         console.log('Decoded data:', decodedData);
-        
+
         // Parse the key=value format instead of JSON
         const parsed: any = {};
         const pairs = decodedData.split(', ');
-        
-        pairs.forEach(pair => {
+
+        pairs.forEach((pair) => {
           const [key, ...valueParts] = pair.split('=');
           if (key && valueParts.length > 0) {
             let value = valueParts.join('='); // Rejoin in case value contains '='
             value = value.trim();
-            
+
             // Fix corrupted currency symbols
             value = value.replace(/â¦/g, '₦');
             value = value.replace(/â/g, '₦');
@@ -113,20 +95,20 @@ function HrApprovalContent() {
             value = value.replace(/₦â¦/g, '₦');
             value = value.replace(/₦¦/g, '₦');
             value = value.replace(/¦/g, '');
-            
+
             // Clean up any extra spaces around the currency symbol
             value = value.replace(/₦\s+/g, '₦ ');
             value = value.replace(/\s+₦/g, ' ₦');
-            
+
             parsed[key.trim()] = value;
           }
         });
-        
+
         console.log('Parsed data:', parsed);
         setParsedData(parsed);
-        
+
         // Update form data with parsed information
-        setFormData(prev => {
+        setFormData((prev) => {
           // Helper function to clean and format currency values
           const formatCurrency = (value: string) => {
             if (!value) return '';
@@ -138,7 +120,9 @@ function HrApprovalContent() {
           return {
             ...prev,
             employeeName: parsed.employeeName || prev.employeeName,
-            monthlySalary: parsed.monthlySalary ? formatCurrency(parsed.monthlySalary) : prev.monthlySalary,
+            monthlySalary: parsed.monthlySalary
+              ? formatCurrency(parsed.monthlySalary)
+              : prev.monthlySalary,
             takeHomePay: parsed.takeHomePay ? formatCurrency(parsed.takeHomePay) : prev.takeHomePay,
             role: parsed.jobRole || parsed.jobTitle || prev.role,
             employer: parsed.employer || prev.employer,
