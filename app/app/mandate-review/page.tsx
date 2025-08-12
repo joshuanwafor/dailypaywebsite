@@ -14,6 +14,7 @@ import {
   IconMapPin,
   IconUser,
   IconWallet,
+  IconX,
 } from '@tabler/icons-react';
 import {
   Accordion,
@@ -49,12 +50,17 @@ import {
 } from '@mantine/core';
 import PageHeaderSection from '@/components/Sections/PageHeaderSection';
 import { dailypayResource } from '@/config/sdk';
+import { DailyPayJobStep4ApproveMandateEmployerTypeEnum } from '@/src/sdk/catalog/api';
 
 function HrApprovalContent() {
   const [isApproved, setIsApproved] = useState(false);
+  const [isDeclined, setIsDeclined] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showDeclineModal, setShowDeclineModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isDeclineLoading, setIsDeclineLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [declineReason, setDeclineReason] = useState('');
   const searchParams = useSearchParams();
 
   // Extract URL parameters
@@ -152,6 +158,18 @@ function HrApprovalContent() {
         id: id,
         token: token,
         comment: comment || '',
+        companySize: hrInfo.companySize,
+        contactPhone: hrInfo.contactPhone,
+        employerAddress: hrInfo.employerAddress,
+        employerName: hrInfo.employerName,
+        employerType: hrInfo.employerType,
+        hrEmail: hrInfo.hrEmail,
+        hrFirstName: hrInfo.hrFirstName,
+        hrJobTitle: hrInfo.hrJobTitle,
+        hrLastName: hrInfo.hrLastName,
+        industry: hrInfo.industry,
+        employerRCNumber: hrInfo.employerRCNumber,
+        employerWebsite: hrInfo.employerWebsite,
       });
 
       if (response.data?.success) {
@@ -168,6 +186,43 @@ function HrApprovalContent() {
     }
   }
 
+  async function declineDailyPayAccess(reason: string) {
+    if (!token || !id || !email) {
+      setError('Missing required parameters: token, id, or email');
+      return;
+    }
+
+    if (!reason.trim()) {
+      setError('Please provide a reason for declining the request');
+      return;
+    }
+
+    setIsDeclineLoading(true);
+    setError(null);
+
+    try {
+      const response = await dailypayResource.declineMandateRequest({
+        encryptedEmail: email,
+        id: id,
+        token: token,
+        declineReason: reason.trim(),
+      });
+
+      if (response.data?.success) {
+        setIsDeclined(true);
+        setShowDeclineModal(false);
+        setShowSuccessModal(true);
+      } else {
+        setError(response.data?.message || 'Decline request failed');
+      }
+    } catch (error: any) {
+      console.error('Error declining mandate:', error);
+      setError(error.response?.data?.message || 'An error occurred while declining the request');
+    } finally {
+      setIsDeclineLoading(false);
+    }
+  }
+
   const [formData, setFormData] = useState({
     employeeName: '',
     monthlySalary: '',
@@ -178,6 +233,21 @@ function HrApprovalContent() {
     duration: '',
     hrEmail: '',
     hrPhone: '',
+  });
+
+  const [hrInfo, setHrInfo] = useState({
+    companySize: '',
+    contactPhone: '',
+    employerAddress: '',
+    employerName: '',
+    employerType: DailyPayJobStep4ApproveMandateEmployerTypeEnum.Government,
+    hrEmail: '',
+    hrFirstName: '',
+    hrJobTitle: '',
+    hrLastName: '',
+    industry: '',
+    employerRCNumber: '',
+    employerWebsite: '',
   });
 
   const [approvalData, setApprovalData] = useState({
@@ -207,7 +277,35 @@ function HrApprovalContent() {
       return;
     }
 
+    // Check if required HR information is provided
+    const requiredHrFields = [
+      hrInfo.employerName,
+      hrInfo.employerAddress,
+      hrInfo.industry,
+      hrInfo.companySize,
+      hrInfo.hrFirstName,
+      hrInfo.hrLastName,
+      hrInfo.hrJobTitle,
+      hrInfo.hrEmail,
+      hrInfo.contactPhone,
+    ];
+
+    const allHrFieldsFilled = requiredHrFields.every((field) => field.trim() !== '');
+
+    if (!allHrFieldsFilled) {
+      alert('Please fill in all required HR information fields before proceeding.');
+      return;
+    }
+
     approveDailyPayAccess(additionalComment);
+  };
+
+  const handleDecline = () => {
+    setShowDeclineModal(true);
+  };
+
+  const handleConfirmDecline = () => {
+    declineDailyPayAccess(declineReason);
   };
 
   // Show error if URL parameters are missing
@@ -264,23 +362,75 @@ function HrApprovalContent() {
       withCloseButton={false}
     >
       <Stack align="center" gap="lg" py={40}>
-        <ThemeIcon size={80} radius="xl" color="green">
-          <IconCircleCheck size={40} />
+        <ThemeIcon size={80} radius="xl" color={isDeclined ? 'red' : 'green'}>
+          {isDeclined ? <IconX size={40} /> : <IconCircleCheck size={40} />}
         </ThemeIcon>
-        <Title order={2} ta="center" c="green">
-          Approval Successful!
+        <Title order={2} ta="center" c={isDeclined ? 'red' : 'green'}>
+          {isDeclined ? 'Request Declined' : 'Approval Successful!'}
         </Title>
         <Text ta="center" size="lg" c="gray.7">
-          {formData.employeeName} has been approved for DailyPay access. They will receive a
-          notification and can start earning daily wages immediately.
+          {isDeclined
+            ? `The DailyPay access request for ${formData.employeeName} has been declined.`
+            : `${formData.employeeName} has been approved for DailyPay access. They will receive a notification and can start earning daily wages immediately.`}
         </Text>
         <Button
           size="lg"
           onClick={() => setShowSuccessModal(false)}
-          leftSection={<IconCheck size={20} />}
+          leftSection={isDeclined ? <IconX size={20} /> : <IconCheck size={20} />}
         >
           Done
         </Button>
+      </Stack>
+    </Modal>
+  );
+
+  const DeclineModal = () => (
+    <Modal
+      opened={showDeclineModal}
+      onClose={() => setShowDeclineModal(false)}
+      size="md"
+      centered
+      title="Decline DailyPay Request"
+    >
+      <Stack gap="lg">
+        <Alert
+          title="Important Notice"
+          color="red"
+          variant="light"
+          icon={<IconInfoCircle size={16} />}
+        >
+          Declining this request will prevent the employee from accessing DailyPay services. Please
+          provide a clear reason for the decline.
+        </Alert>
+
+        <Text size="sm" fw={500}>
+          Reason for Decline *
+        </Text>
+        <Textarea
+          placeholder="Please provide a detailed reason for declining this DailyPay request..."
+          rows={4}
+          value={declineReason}
+          onChange={(event) => setDeclineReason(event.currentTarget.value)}
+          required
+        />
+
+        <Group justify="flex-end" gap="md">
+          <Button
+            variant="outline"
+            onClick={() => setShowDeclineModal(false)}
+            disabled={isDeclineLoading}
+          >
+            Cancel
+          </Button>
+          <Button
+            color="red"
+            onClick={handleConfirmDecline}
+            disabled={!declineReason.trim() || isDeclineLoading}
+            leftSection={<IconX size={16} />}
+          >
+            {isDeclineLoading ? 'Declining...' : 'Decline Request'}
+          </Button>
+        </Group>
       </Stack>
     </Modal>
   );
@@ -533,20 +683,184 @@ function HrApprovalContent() {
                     Contact Support
                   </Button>
 
-                  <Button
-                    size="lg"
-                    color="green"
-                    leftSection={<IconCheck size={20} />}
-                    onClick={handleApprove}
-                    disabled={!Object.values(approvalData).every((value) => value) || isLoading}
-                  >
-                    {isLoading ? 'Approving...' : 'Approve DailyPay Access'}
-                  </Button>
+                  <Group gap="md">
+                    <Button
+                      variant="outline"
+                      color="red"
+                      leftSection={<IconX size={16} />}
+                      onClick={handleDecline}
+                      disabled={isLoading || isDeclineLoading}
+                    >
+                      Decline Request
+                    </Button>
+
+                    <Button
+                      size="lg"
+                      color="green"
+                      leftSection={<IconCheck size={20} />}
+                      onClick={handleApprove}
+                      disabled={
+                        !Object.values(approvalData).every((value) => value) ||
+                        !hrInfo.employerName.trim() ||
+                        !hrInfo.employerAddress.trim() ||
+                        !hrInfo.industry.trim() ||
+                        !hrInfo.companySize.trim() ||
+                        !hrInfo.hrFirstName.trim() ||
+                        !hrInfo.hrLastName.trim() ||
+                        !hrInfo.hrJobTitle.trim() ||
+                        !hrInfo.hrEmail.trim() ||
+                        !hrInfo.contactPhone.trim() ||
+                        isLoading ||
+                        isDeclineLoading
+                      }
+                    >
+                      {isLoading ? 'Approving...' : 'Approve DailyPay Access'}
+                    </Button>
+                  </Group>
                 </Group>
               </Stack>
             </Card>
           </GridCol>
         </Grid>
+
+        {/* HR Information Form */}
+        <Box mt={40}>
+          <Card shadow="sm" padding="xl" radius="md" withBorder>
+            <Stack gap="lg">
+              <Group>
+                <ThemeIcon size={50} radius="xl" color="blue">
+                  <IconUser size={25} />
+                </ThemeIcon>
+                <div>
+                  <Title order={3} size="h4">
+                    HR Information
+                  </Title>
+                  <Text size="sm" c="gray.6">
+                    Please provide additional company and HR details
+                  </Text>
+                </div>
+              </Group>
+
+              <Divider />
+
+              <Alert
+                title="Required Information"
+                color="blue"
+                variant="light"
+                icon={<IconInfoCircle size={16} />}
+              >
+                To complete the approval process, please provide the following additional information about your organization and HR contact details.
+              </Alert>
+
+              <Grid gutter="lg">
+                {/* Company Information */}
+                <GridCol span={{ base: 12, md: 6 }}>
+                  <Stack gap="md">
+                    <Title order={4} size="h5">
+                      Company Information
+                    </Title>
+                    
+                    <TextInput
+                      label="Company Name"
+                      placeholder="Enter company name"
+                      value={hrInfo.employerName}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, employerName: event.currentTarget.value }))}
+                      required
+                    />
+
+                    <TextInput
+                      label="Company Address"
+                      placeholder="Enter company address"
+                      value={hrInfo.employerAddress}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, employerAddress: event.currentTarget.value }))}
+                      required
+                    />
+
+                    <TextInput
+                      label="Company Website"
+                      placeholder="https://example.com"
+                      value={hrInfo.employerWebsite}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, employerWebsite: event.currentTarget.value }))}
+                    />
+
+                    <TextInput
+                      label="RC Number (if applicable)"
+                      placeholder="Enter RC number"
+                      value={hrInfo.employerRCNumber}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, employerRCNumber: event.currentTarget.value }))}
+                    />
+
+                    <TextInput
+                      label="Industry"
+                      placeholder="e.g., Technology, Healthcare, Finance"
+                      value={hrInfo.industry}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, industry: event.currentTarget.value }))}
+                      required
+                    />
+
+                    <TextInput
+                      label="Company Size"
+                      placeholder="e.g., 50-100 employees"
+                      value={hrInfo.companySize}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, companySize: event.currentTarget.value }))}
+                      required
+                    />
+                  </Stack>
+                </GridCol>
+
+                {/* HR Contact Information */}
+                <GridCol span={{ base: 12, md: 6 }}>
+                  <Stack gap="md">
+                    <Title order={4} size="h5">
+                      HR Contact Information
+                    </Title>
+                    
+                    <TextInput
+                      label="HR First Name"
+                      placeholder="Enter first name"
+                      value={hrInfo.hrFirstName}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, hrFirstName: event.currentTarget.value }))}
+                      required
+                    />
+
+                    <TextInput
+                      label="HR Last Name"
+                      placeholder="Enter last name"
+                      value={hrInfo.hrLastName}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, hrLastName: event.currentTarget.value }))}
+                      required
+                    />
+
+                    <TextInput
+                      label="HR Job Title"
+                      placeholder="e.g., HR Manager, HR Director"
+                      value={hrInfo.hrJobTitle}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, hrJobTitle: event.currentTarget.value }))}
+                      required
+                    />
+
+                    <TextInput
+                      label="HR Email"
+                      type="email"
+                      placeholder="hr@company.com"
+                      value={hrInfo.hrEmail}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, hrEmail: event.currentTarget.value }))}
+                      required
+                    />
+
+                    <TextInput
+                      label="Contact Phone"
+                      placeholder="+234 123 456 7890"
+                      value={hrInfo.contactPhone}
+                      onChange={(event) => setHrInfo(prev => ({ ...prev, contactPhone: event.currentTarget.value }))}
+                      required
+                    />
+                  </Stack>
+                </GridCol>
+              </Grid>
+            </Stack>
+          </Card>
+        </Box>
 
         {/* Process Timeline */}
         <Box mt={80}>
@@ -554,7 +868,7 @@ function HrApprovalContent() {
             What Happens Next?
           </Title>
 
-          <Timeline active={isApproved ? 3 : 1} bulletSize={24} lineWidth={2}>
+          <Timeline active={isApproved ? 3 : isDeclined ? 0 : 1} bulletSize={24} lineWidth={2}>
             <TimelineItem bullet={<IconCheck size={12} />} title="HR Approval">
               <Text size="sm" c="gray.6" mt={4}>
                 HR reviews and approves the employee's DailyPay request
@@ -583,6 +897,7 @@ function HrApprovalContent() {
       </Container>
 
       <SuccessModal />
+      <DeclineModal />
     </>
   );
 }

@@ -18,7 +18,7 @@
     "test": "npm run prettier:check && npm run lint && npm run typecheck && npm run jest",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "gen-catalog": "openapi-generator-cli generate -i https://dev.api.alerts.africa/v3/api-docs -g typescript-axios -o sdk/catalog"
+    "gen-catalog": "openapi-generator-cli generate -i docs.json -g typescript-axios -o src/sdk/catalog"
   },
   "dependencies": {
     "@mantine/core": "7.16.3",
