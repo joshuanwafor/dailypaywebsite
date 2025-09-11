@@ -181,27 +181,12 @@ export default function HomePage() {
                     lh={1.1}
                     style={{ fontFamily: '"Outfit", sans-serif' }}
                   >
-                    Access Your{' '}
-                    <Text
-                      component="span"
-                      fw={700}
-                      c="#329aae"
-                      style={{
-                        background: 'linear-gradient(135deg, #329aae 0%, #5ac7dd 100%)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                      }}
-                    >
-                      Daily Wages
-                    </Text>
+                    Get Paid Daily{' '}
                     <br />
-                    Instantly
+                    Not Monthly.
                   </Title>
-
                   <Text size="xl" c="gray.7" lh={1.6} maw={520} fw={300}>
-                    Stop waiting until month-end for your salary. Get paid every day you work with
-                    zero interest, zero stress, maximum financial freedom.
+                    With DailyPay, your earned wages are credited every day. No more waiting till payday. Withdraw what you’ve worked for — when you need it.
                   </Text>
                 </Stack>
 
@@ -218,6 +203,50 @@ export default function HomePage() {
                       ✨ What makes us different:
                     </Text>
                     <SimpleGrid cols={1} spacing="xs">
+                    <Group gap="sm">
+                        <Box
+                          w={24}
+                          h={24}
+                          bg="#329aae"
+                          style={{
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                          }}
+                        >
+                          <IconCheck size={14} color="white" />
+                        </Box>
+                        <Text size="sm" c="gray.7" fw={400}>
+                          <Text component="span" fw={600}>
+                          Daily payment
+                          </Text>{' '}
+                          of earned wages
+                        </Text>
+                      </Group>
+
+                      <Group gap="sm">
+                        <Box
+                          w={24}
+                          h={24}
+                          bg="#329aae"
+                          style={{
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                          }}
+                        >
+                          <IconCheck size={14} color="white" />
+                        </Box>
+                        <Text size="sm" c="gray.7" fw={400}>
+                          <Text component="span" fw={600}>
+                          Dedicated
+                          </Text>{' '}
+                          Salary Account 
+                        </Text>
+                      </Group>
+
                       <Group gap="sm">
                         <Box
                           w={24}
@@ -260,27 +289,7 @@ export default function HomePage() {
                           for all transactions
                         </Text>
                       </Group>
-                      <Group gap="sm">
-                        <Box
-                          w={24}
-                          h={24}
-                          bg="#329aae"
-                          style={{
-                            borderRadius: '50%',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                          }}
-                        >
-                          <IconCheck size={14} color="white" />
-                        </Box>
-                        <Text size="sm" c="gray.7" fw={400}>
-                          <Text component="span" fw={600}>
-                            Instant transfers
-                          </Text>{' '}
-                          to any Nigerian bank
-                        </Text>
-                      </Group>
+              
                     </SimpleGrid>
                   </Stack>
                 </Box>
