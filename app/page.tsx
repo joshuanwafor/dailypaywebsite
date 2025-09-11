@@ -169,7 +169,7 @@ export default function HomePage() {
                     </Group>
                   </Box>
                   <Text size="sm" c="gray.6" fw={500}>
-                    Trusted by 5,000+ workers
+                    Trusted by 1,000+ workers
                   </Text>
                 </Group>
 
