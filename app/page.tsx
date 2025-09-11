@@ -736,7 +736,7 @@ export default function HomePage() {
               </Title>
 
               <Text size="lg" c="white" opacity={0.9} maw={600} lh={1.7} fw={300}>
-                Join over 5,000 Nigerian workers who are already earning daily. Zero interest,
+              Join the growing number of Nigerian workers who are already earning daily. Zero interest,
                 maximum flexibility, complete security.
               </Text>
 
