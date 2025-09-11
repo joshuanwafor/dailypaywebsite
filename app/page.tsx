@@ -693,7 +693,7 @@ export default function HomePage() {
                 </Text>
                 <Divider size="xs" color="gray.2" />
                 <Group gap="sm" mt="auto">
-                  <Avatar src={testimonial.avatar} size="lg" radius="xl" />
+                  <Avatar size="lg" radius="xl" />
                   <Stack gap={2}>
                     <Text fw={500} size="sm" c="#0b4650">
                       {testimonial.name}
@@ -701,9 +701,9 @@ export default function HomePage() {
                     <Text size="xs" c="gray.6" fw={400}>
                       {testimonial.role}
                     </Text>
-                    <Text size="xs" c="gray.5">
+                    {/* <Text size="xs" c="gray.5">
                       {testimonial.company}
-                    </Text>
+                    </Text> */}
                   </Stack>
                 </Group>
               </Stack>
