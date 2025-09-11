@@ -326,53 +326,16 @@ export default function HowItWorksPage() {
                     <Text size="sm">Have a valid BVN (Bank Verification Number)</Text>
                   </List.Item>
                   <List.Item>
-                    <Text size="sm">Be employed by a DailyPay partner company</Text>
+                    <Text size="sm">Be an employee of an active company</Text>
                   </List.Item>
                   <List.Item>
-                    <Text size="sm">Have a Nigerian bank account</Text>
+                    <Text size="sm">Be debt-free</Text>
                   </List.Item>
                   <List.Item>
-                    <Text size="sm">Earn a minimum of ₦30,000 monthly</Text>
-                  </List.Item>
-                </List>
-              </Stack>
-            </Grid.Col>
-            
-            <Grid.Col span={{ base: 12, md: 6 }}>
-              <Stack gap="md">
-                <Group>
-                  <ThemeIcon size={50} color="#329aae" variant="light" radius="xl">
-                    <IconBusinessplan size={24} />
-                  </ThemeIcon>
-                  <Title order={3} fw={500} c="#0b4650">
-                    For Employers
-                  </Title>
-                </Group>
-                <Text c="gray.7" size="md" lh={1.6}>
-                  Companies can easily integrate DailyPay into their benefits package:
-                </Text>
-                <List 
-                  spacing="sm"
-                  icon={
-                    <ThemeIcon size="sm" color="#329aae" variant="light" radius="xl">
-                      <IconCheck size={12} />
-                    </ThemeIcon>
-                  }
-                >
-                  <List.Item>
-                    <Text size="sm">Free integration and setup</Text>
+                    <Text size="sm">Ensured HR Approval to DailyPay by Alerts terms</Text>
                   </List.Item>
                   <List.Item>
-                    <Text size="sm">No upfront costs or monthly fees</Text>
-                  </List.Item>
-                  <List.Item>
-                    <Text size="sm">Seamless payroll system integration</Text>
-                  </List.Item>
-                  <List.Item>
-                    <Text size="sm">Improved employee satisfaction and retention</Text>
-                  </List.Item>
-                  <List.Item>
-                    <Text size="sm">Detailed analytics and reporting</Text>
+                    <Text size="sm">Must have linked bank account to confirm payment information</Text>
                   </List.Item>
                 </List>
               </Stack>
