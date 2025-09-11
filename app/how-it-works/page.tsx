@@ -394,18 +394,6 @@ export default function HowItWorksPage() {
               >
                 Get Started Now
               </Button>
-              <Button 
-                size="xl" 
-                variant="outline" 
-                color="white"
-                leftSection={<IconPhone size={20} />}
-                radius="xl"
-                fw={400}
-                px="xl"
-                h={56}
-              >
-                Schedule Demo
-              </Button>
             </Group>
           </Stack>
         </Card>
