@@ -85,7 +85,7 @@ const steps = [
     step: '02',
     title: 'Get HR Department Approval',
     description:
-      'Your HR department approves salary payments to your dedicated DailyPay virtual account for seamless integration.',
+      'Your HR department approves salary payments to your dedicated DailyPay virtual account.',
     icon: IconBuilding,
     time: '1-2 days',
   },
