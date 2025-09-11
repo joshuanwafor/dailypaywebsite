@@ -169,7 +169,7 @@ export default function HomePage() {
                     </Group>
                   </Box>
                   <Text size="sm" c="gray.6" fw={500}>
-                    Trusted by 50,000+ workers
+                    Trusted by 5,000+ workers
                   </Text>
                 </Group>
 
@@ -203,7 +203,7 @@ export default function HomePage() {
                       ✨ What makes us different:
                     </Text>
                     <SimpleGrid cols={1} spacing="xs">
-                    <Group gap="sm">
+                      <Group gap="sm">
                         <Box
                           w={24}
                           h={24}
@@ -219,7 +219,7 @@ export default function HomePage() {
                         </Box>
                         <Text size="sm" c="gray.7" fw={400}>
                           <Text component="span" fw={600}>
-                          Daily payment
+                            Daily payment
                           </Text>{' '}
                           of earned wages
                         </Text>
@@ -241,9 +241,9 @@ export default function HomePage() {
                         </Box>
                         <Text size="sm" c="gray.7" fw={400}>
                           <Text component="span" fw={600}>
-                          Dedicated
+                            Dedicated
                           </Text>{' '}
-                          Salary Account 
+                          Salary Account
                         </Text>
                       </Group>
 
@@ -289,7 +289,7 @@ export default function HomePage() {
                           for all transactions
                         </Text>
                       </Group>
-              
+
                     </SimpleGrid>
                   </Stack>
                 </Box>
@@ -511,7 +511,7 @@ export default function HomePage() {
       </Box>
 
       {/* Stats Section */}
-      <Box py={80} bg="gray.0">
+      {/* <Box py={80} bg="gray.0">
         <Container size="lg">
           <Stack align="center" mb="xl">
             <Text size="sm" tt="uppercase" fw={500} c="gray.6">
@@ -540,7 +540,7 @@ export default function HomePage() {
             ))}
           </SimpleGrid>
         </Container>
-      </Box>
+      </Box> */}
 
       {/* Features Section */}
       <Container size="lg" py={100}>
@@ -736,7 +736,7 @@ export default function HomePage() {
               </Title>
 
               <Text size="lg" c="white" opacity={0.9} maw={600} lh={1.7} fw={300}>
-                Join over 50,000 Nigerian workers who are already earning daily. Zero interest,
+                Join over 5,000 Nigerian workers who are already earning daily. Zero interest,
                 maximum flexibility, complete security.
               </Text>
 
