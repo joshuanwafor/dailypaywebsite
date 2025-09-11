@@ -57,8 +57,7 @@ export function Footer() {
               </Link>
               
               <Text size="sm" c="gray.3" lh={1.6}>
-                Empowering African workers to access their earned wages daily. 
-                Get paid every day you work, with zero interest on claimed funds.
+              DailyPay is a financial technology company, not a bank. Banking services are provided by Wema Bank and Safe Haven Microfinance Bank, members of the Nigeria Deposit Insurance Corporation (NDIC). The NDIC provides deposit insurance to protect your money in the event of a bank failure. More details about deposit insurance  here; https://ndic.gov.ng/deposit-insurance/
               </Text>
               
               <Stack gap="xs" mt="md">

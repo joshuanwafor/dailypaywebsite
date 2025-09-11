@@ -57,48 +57,48 @@ import PageHeaderSection from '@/components/Sections/PageHeaderSection';
 const steps = [
   {
     step: '01',
-    title: 'Create Account & Verify Identity',
-    description: 'Sign up with your email address and complete our secure KYC verification process using your BVN (Bank Verification Number). This ensures full compliance with Nigerian financial regulations.',
+    title: 'Create Account, Verify Identity and Enable DailyPay',
+    description: 'Sign up with your email address and complete the KYC verification process using your BVN (Bank Verification Number). Enable DailyPay and provide employment details to start earning DailyPay.',
     icon: IconUsers,
     time: '2-3 minutes',
     details: [
-      'Provide basic personal information (name, email, phone)',
-      'Verify your BVN for identity confirmation',
-      'Upload a valid government-issued ID (National ID, Driver\'s License, or Passport)',
-      'Take a quick selfie for biometric verification',
-      'Receive instant verification confirmation'
+      'Sign up with your email address',
+      'Complete KYC verification using your BVN',
+      'Enable DailyPay feature',
+      'Provide employment details including HR email address',
+      'Submit employment information for verification'
     ],
-    requirements: ['Valid BVN', 'Government-issued ID', 'Nigerian phone number', 'Active email address']
+    requirements: ['BVN', 'Email address', 'Details of employer including HR email address', 'Employment information']
   },
   {
     step: '02',
-    title: 'HR Department Integration',
-    description: 'Your HR department sets up salary payments to your dedicated DailyPay virtual account. This secure integration allows us to track your daily earnings in real-time.',
+    title: 'HR Department Approval',
+    description: 'Your HR upon receiving an email from DailyPay by Alerts must after reading through the terms, click the approve button to activate your DailyPay.',
     icon: IconBuilding,
     time: '1-3 business days',
     details: [
-      'Share your unique DailyPay employee code with HR',
-      'HR department creates a dedicated virtual account for you',
-      'Your daily wage calculations are automatically computed',
-      'Secure API integration with payroll systems',
-      'Real-time synchronization of work hours and earnings'
+      'HR receives email notification from DailyPay by Alerts',
+      'HR reviews the terms and conditions',
+      'HR confirms employment details',
+      'HR clicks approve button to activate DailyPay',
+      'System processes approval and activates account'
     ],
-    requirements: ['HR department approval', 'Company partnership with DailyPay', 'Valid employment contract', 'Payroll system integration']
+    requirements: ['Valid HR Email address', 'Employer agreement to the terms', 'HR confirmation of your employment details']
   },
   {
     step: '03',
-    title: 'Start Accessing Daily Wages',
-    description: 'Once everything is set up, you can start accessing your earned wages daily. Get notifications about available funds and transfer money instantly to any Nigerian bank account.',
+    title: 'Start Accessing DailyPay',
+    description: 'Once HR approves, you will be notified and you will start earning DailyPay. You will be notified of your DailyPay credit at the close of business everyday.',
     icon: IconTrendingUp,
     time: 'Immediate access',
     details: [
-      'Receive daily notifications of earned wages',
-      'View your available balance in the mobile app',
-      'Transfer funds instantly to your preferred bank account',
-      'Track your withdrawal history and patterns',
-      'Set up automatic transfers or manual withdrawals'
+      'Receive notification of HR approval',
+      'Start earning DailyPay credits',
+      'Get daily notifications of DailyPay credit at close of business',
+      'Access your earned wages through the platform',
+      'Transfer funds to your DailyPay by Alert salary account'
     ],
-    requirements: ['Active bank account', 'DailyPay mobile app', 'Completed work hours', 'Minimum withdrawal amount met']
+    requirements: ['HR Approval', 'DailyPay by Alert salary account']
   },
 ];
 
