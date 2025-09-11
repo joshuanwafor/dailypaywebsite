@@ -132,29 +132,29 @@ const features = [
 const faqs = [
   {
     question: 'How much of my salary can I access daily?',
-    answer: 'You can access up to 50% of your earned wages for any given day. For example, if you earn ₦5,000 per day, you can withdraw up to ₦2,500 daily through DailyPay.'
+    answer:
+      `With DailyPay, you don’t have to wait until payday. At the end of each workday, your entire daily wage is available for withdrawal.
+👉 Example: If you earn ₦5,000 per day, you’ll see ₦5,000 credited daily in the app — and you can withdraw it anytime.
+Your money. Your control. DailyPay.
+`,
   },
   {
     question: 'What happens if I change jobs?',
-    answer: 'Simply update your employment information in the app and have your new HR department complete the integration process. Your account remains active and all your transaction history is preserved.'
+    answer:
+      `If you change employers, you must update your employment details in the app. Once updated, DailyPay will send a mandate to your new employer, and your DailyPay access will be reactivated after the mandate is completed.
+⚠️ Please note: Failure to update your employment information after a job change will be considered a breach of your agreement. If payments remain outstanding during this period, it will be treated as a default.`,
   },
   {
-    question: 'Are there any limits on withdrawals?',
-    answer: 'The minimum withdrawal amount is ₦500 per transaction. The maximum depends on your earned wages for that period. There are no monthly limits as long as you have earned wages available.'
+    question: 'Are there limits on withdrawals?',
+    answer:
+      `There are no limits on withdrawals. You can access your earned wages as often as you like, up to the total amount you’ve earned for that period.`,
   },
   {
-    question: 'How does DailyPay calculate my daily earnings?',
-    answer: 'We integrate directly with your company\'s payroll system to track your work hours and calculate daily earnings based on your salary. This ensures 100% accuracy and transparency.'
+    question: 'How does dailypay calculate my daily earnings ?',
+    answer:
+      `When you join DailyPay, we send a mandate to your HR department for approval. Once approved, your employer agrees to pay your salary into the dedicated DailyPay salary account we provide. From there, DailyPay breaks down your confirmed monthly salary into daily amounts, based on the number of workdays in the month. This ensures accuracy, fairness, and transparency in what you can access each day.`,
   },
-  {
-    question: 'What if my company doesn\'t use DailyPay yet?',
-    answer: 'You can refer DailyPay to your HR department. We offer free integration and setup for companies. Our business development team will handle the entire onboarding process.'
-  },
-  {
-    question: 'Is my financial data safe with DailyPay?',
-    answer: 'Absolutely. We use bank-level encryption, are fully licensed by the CBN, and comply with all Nigerian financial regulations. Your data is never shared with third parties without your consent.'
-  }
-];
+]
 
 export default function HowItWorksPage() {
   return (

@@ -81,24 +81,28 @@ const faqs = {
   ],
   limits: [
     {
-      question: 'How much can I access daily?',
+      question: 'How much of my salary can I access daily?',
       answer:
-        'You can access up to 50% of your earned wages for the current pay period. The exact amount depends on your daily earnings and what you\'ve already accessed.',
+        `With DailyPay, you don’t have to wait until payday. At the end of each workday, your entire daily wage is available for withdrawal.
+👉 Example: If you earn ₦5,000 per day, you’ll see ₦5,000 credited daily in the app — and you can withdraw it anytime.
+Your money. Your control. DailyPay.
+`,
     },
     {
-      question: 'Is there a daily limit?',
+      question: 'What happens if I change jobs?',
       answer:
-        'The daily limit is based on your earned wages. You cannot access more than what you\'ve actually earned, up to a maximum of 50% of your total monthly salary.',
+        `If you change employers, you must update your employment details in the app. Once updated, DailyPay will send a mandate to your new employer, and your DailyPay access will be reactivated after the mandate is completed.
+⚠️ Please note: Failure to update your employment information after a job change will be considered a breach of your agreement. If payments remain outstanding during this period, it will be treated as a default.`,
     },
     {
-      question: 'Can I increase my access limit?',
+      question: 'Are there limits on withdrawals?',
       answer:
-        'Limits are set based on your salary and employment status. As you build a good history with DailyPay, some limits may be adjusted, but the 50% rule always applies.',
+        `There are no limits on withdrawals. You can access your earned wages as often as you like, up to the total amount you’ve earned for that period.`,
     },
     {
-      question: 'What if I need more than my daily limit?',
+      question: 'How does dailypay calculate my daily earnings ?',
       answer:
-        'DailyPay is designed for daily expenses, not large purchases. If you need more than your earned wages, consider traditional lending options or speak with your employer about a salary advance.',
+        `When you join DailyPay, we send a mandate to your HR department for approval. Once approved, your employer agrees to pay your salary into the dedicated DailyPay salary account we provide. From there, DailyPay breaks down your confirmed monthly salary into daily amounts, based on the number of workdays in the month. This ensures accuracy, fairness, and transparency in what you can access each day.`,
     },
   ],
   technical: [
