@@ -52,7 +52,7 @@ export function Footer() {
             <Stack gap="md">
               <Link href="/" className={classes.brandLink}>
                 <Group gap="xs">
-                  <img src="/6.png" alt="Alerts africa" width={160} />
+                  <img src="/hlogolight.svg" alt="Alerts africa" width={160} />
                 </Group>
               </Link>
               

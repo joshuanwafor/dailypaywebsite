@@ -157,6 +157,37 @@ Your money. Your control. DailyPay.
 ]
 
 export default function HowItWorksPage() {
+  // Device detection function
+  const detectDevice = () => {
+    if (typeof window === 'undefined') return 'unknown';
+    
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(userAgent)) {
+      return 'ios';
+    } else if (/android/.test(userAgent)) {
+      return 'android';
+    }
+    return 'unknown';
+  };
+
+  // App store links
+  const playStoreLink = 'https://play.google.com/store/apps/details?id=com.alerts.dailypay.mobile&hl=en';
+  const appStoreLink = 'https://apps.apple.com/ng/app/dailypay/id6751250517';
+
+  // Handle get started button click
+  const handleGetStarted = () => {
+    const device = detectDevice();
+    
+    if (device === 'ios') {
+      window.open(appStoreLink, '_blank');
+    } else if (device === 'android') {
+      window.open(playStoreLink, '_blank');
+    } else {
+      // For unknown devices, open Play Store by default
+      window.open(playStoreLink, '_blank');
+    }
+  };
+
   return (
     <>
       <PageHeaderSection
@@ -391,6 +422,7 @@ export default function HowItWorksPage() {
                 fw={600}
                 px="xl"
                 h={56}
+                onClick={handleGetStarted}
               >
                 Get Started Now
               </Button>

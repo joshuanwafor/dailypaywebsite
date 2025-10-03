@@ -148,7 +148,37 @@ const benefits = [
   '24/7 customer support',
 ];
 
+const playstoreLink="https://play.google.com/store/apps/details?id=com.alerts.dailypay.mobile&hl=en";
+const appstoreLink="https://apps.apple.com/ng/app/dailypay/id6751250517"
+
 export default function HomePage() {
+  // Device detection function
+  const detectDevice = () => {
+    if (typeof window === 'undefined') return 'unknown';
+    
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(userAgent)) {
+      return 'ios';
+    } else if (/android/.test(userAgent)) {
+      return 'android';
+    }
+    return 'unknown';
+  };
+
+  // Handle get started button click
+  const handleGetStarted = () => {
+    const device = detectDevice();
+    
+    if (device === 'ios') {
+      window.open(appstoreLink, '_blank');
+    } else if (device === 'android') {
+      window.open(playstoreLink, '_blank');
+    } else {
+      // For unknown devices, open Play Store by default
+      window.open(playstoreLink, '_blank');
+    }
+  };
+
   return (
     <Box>
       {/* Hero Section */}
@@ -172,7 +202,6 @@ export default function HomePage() {
                     Trusted by 1,000+ workers
                   </Text>
                 </Group>
-
                 <Stack gap="md">
                   <Title
                     size={rem(58)}
@@ -303,20 +332,9 @@ export default function HomePage() {
                     fw={600}
                     px="xl"
                     h={56}
+                    onClick={handleGetStarted}
                   >
-                    Start Earning Daily
-                  </Button>
-                  <Button
-                    size="xl"
-                    variant="light"
-                    color="#0b4650"
-                    leftSection={<IconPhone size={20} />}
-                    radius="xl"
-                    fw={400}
-                    px="xl"
-                    h={56}
-                  >
-                    Schedule Demo
+                    Get Started Now
                   </Button>
                 </Group>
 
@@ -406,7 +424,7 @@ export default function HomePage() {
                   {/* Main phone display */}
                   <Box pos="relative">
                     <Image
-                      src="/5.png"
+                      src="/hlogodark.svg"
                       alt="DailyPay Mobile Application"
                       w={280}
                       mx="auto"
@@ -750,6 +768,7 @@ export default function HomePage() {
                   fw={600}
                   px="xl"
                   h={56}
+                  onClick={handleGetStarted}
                 >
                   Get Started Now
                 </Button>

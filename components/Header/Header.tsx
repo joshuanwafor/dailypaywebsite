@@ -39,9 +39,9 @@ export function Header() {
         <Group justify="space-between" h="70px">
           <a href="/" className={classes.logo}>
             <Image
-              src="/5.png"
+              src="/hlogodark.svg"
               alt="DailyPay by Alerts"
-              h={40}
+              h={60}
               w="auto"
               fit="contain"
             />
