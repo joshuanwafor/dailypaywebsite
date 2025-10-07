@@ -64,26 +64,26 @@ const stats = [
   { label: 'Customer Satisfaction', value: '98%', icon: IconAward },
 ];
 
-const team = [
-  {
-    name: 'Adebayo Ogundimu',
-    role: 'CEO & Co-founder',
-    bio: 'Former banking executive with 15+ years in Nigerian financial services.',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-  },
-  {
-    name: 'Kemi Adebayo',
-    role: 'CTO & Co-founder',
-    bio: 'Technology leader with expertise in fintech and payment systems.',
-    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b667aab?w=150&h=150&fit=crop&crop=face',
-  },
-  {
-    name: 'Chukwu Okoro',
-    role: 'Head of Product',
-    bio: 'Product strategist focused on user experience and financial inclusion.',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-  },
-];
+// const team = [
+//   {
+//     name: 'Adebayo Ogundimu',
+//     role: 'CEO & Co-founder',
+//     bio: 'Former banking executive with 15+ years in Nigerian financial services.',
+//     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+//   },
+//   {
+//     name: 'Kemi Adebayo',
+//     role: 'CTO & Co-founder',
+//     bio: 'Technology leader with expertise in fintech and payment systems.',
+//     avatar: 'https://images.unsplash.com/photo-1494790108755-2616b667aab?w=150&h=150&fit=crop&crop=face',
+//   },
+//   {
+//     name: 'Chukwu Okoro',
+//     role: 'Head of Product',
+//     bio: 'Product strategist focused on user experience and financial inclusion.',
+//     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+//   },
+// ];
 
 const timeline = [
   {
@@ -398,7 +398,7 @@ export default function AboutPage() {
       </Box>
 
       {/* Team Section */}
-      <Container size="lg" py={80}>
+      {/* <Container size="lg" py={80}>
         <Stack align="center" gap="lg" mb={60}>
           <Badge size="lg" variant="light" color="#0b4650" radius="md">
             Leadership Team
@@ -428,7 +428,7 @@ export default function AboutPage() {
             </Card>
           ))}
         </SimpleGrid>
-      </Container>
+      </Container> */}
 
       {/* CTA Section */}
       <Box py={80} bg="#0b4650">
