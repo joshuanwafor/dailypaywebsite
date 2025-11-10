@@ -376,7 +376,7 @@ export default function HomePage() {
                       <Stack gap="xs">
                         <IconWallet size={24} color="#329aae" style={{ margin: '0 auto' }} />
                         <Text size="lg" fw={700} c="#0b4650">
-                          ₦15K
+                          ₦1M+
                         </Text>
                         <Text size="xs" c="gray.6">
                           Available
@@ -394,7 +394,7 @@ export default function HomePage() {
                       <Stack gap="xs">
                         <IconUsers size={24} color="#329aae" style={{ margin: '0 auto' }} />
                         <Text size="lg" fw={700} c="#0b4650">
-                          50K+
+                          1k+
                         </Text>
                         <Text size="xs" c="gray.6">
                           Users
@@ -479,19 +479,7 @@ export default function HomePage() {
                       </Stack>
                     </Group>
 
-                    <Group gap="sm">
-                      <ThemeIcon size="sm" color="#329aae" variant="light" radius="xl">
-                        <IconBuilding size={16} />
-                      </ThemeIcon>
-                      <Stack gap={0}>
-                        <Text size="sm" fw={500} c="#0b4650">
-                          1,200+ Companies
-                        </Text>
-                        <Text size="xs" c="gray.6">
-                          Trusted partners
-                        </Text>
-                      </Stack>
-                    </Group>
+                   
                   </SimpleGrid>
 
                   {/* Trust badge */}

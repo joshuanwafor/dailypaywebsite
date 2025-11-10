@@ -34,17 +34,17 @@ const faqs = {
     {
       question: 'What is DailyPay by Alerts?',
       answer:
-        'DailyPay by Alerts is a fintech platform that allows Nigerian workers to access their earned wages daily, instead of waiting until month-end. We partner with employers to provide zero-interest early wage access to employees.',
+        'DailyPay by Alerts is a fintech platform that allows Nigerian workers to access their earned wages daily, instead of waiting until month-end.',
     },
     {
       question: 'Is DailyPay free to use?',
       answer:
-        'Yes, DailyPay is completely free for employees. There are no interest charges, hidden fees, or subscription costs. Your employer covers all processing fees.',
+        'Yes, DailyPay is completely free for employees. There are no interest charges, hidden fees, or subscription costs.',
     },
     {
       question: 'How does DailyPay work?',
       answer:
-        'Once your employer partners with us, you can access up to 50% of your earned wages daily through our mobile app. The accessed amount is automatically deducted from your next salary payment.',
+        'Set up your employment info and we’ll send a mandate to your employer for approval. Once approved, you can access your pay anytime. ',
     },
     {
       question: 'Is DailyPay safe and secure?',
@@ -54,14 +54,14 @@ const faqs = {
     {
       question: 'What happens if I change jobs?',
       answer:
-        'Your DailyPay account remains active. You can simply update your employment details once your new employer partners with us, or you can close your account at any time.',
+        'Your DailyPay account remains active. You can simply update your employment details, or you can close your account at any time.',
     },
   ],
   eligibility: [
     {
       question: 'Who can use DailyPay?',
       answer:
-        'Any Nigerian worker whose employer has partnered with DailyPay can use our service. You must have a valid BVN, bank account, and employment confirmation from your HR department.',
+        'Any Nigerian worker can use our service. You must have a valid BVN to use DailyPay.',
     },
     {
       question: 'Do I need a minimum salary to qualify?',
@@ -71,50 +71,15 @@ const faqs = {
     {
       question: 'Can part-time employees use DailyPay?',
       answer:
-        'Yes, part-time employees can use DailyPay as long as their employer is partnered with us and they meet the basic verification requirements.',
-    },
-    {
-      question: 'What documents do I need to verify my account?',
-      answer:
-        'You need a valid Nigerian ID (National ID, Driver\'s License, or International Passport), BVN, bank account details, and employment verification from your HR department.',
-    },
-  ],
-  limits: [
-    {
-      question: 'How much of my salary can I access daily?',
-      answer:
-        `With DailyPay, you don’t have to wait until payday. At the end of each workday, your entire daily wage is available for withdrawal.
-👉 Example: If you earn ₦5,000 per day, you’ll see ₦5,000 credited daily in the app — and you can withdraw it anytime.
-Your money. Your control. DailyPay.
-`,
-    },
-    {
-      question: 'What happens if I change jobs?',
-      answer:
-        `If you change employers, you must update your employment details in the app. Once updated, DailyPay will send a mandate to your new employer, and your DailyPay access will be reactivated after the mandate is completed.
-⚠️ Please note: Failure to update your employment information after a job change will be considered a breach of your agreement. If payments remain outstanding during this period, it will be treated as a default.`,
-    },
-    {
-      question: 'Are there limits on withdrawals?',
-      answer:
-        `There are no limits on withdrawals. You can access your earned wages as often as you like, up to the total amount you’ve earned for that period.`,
-    },
-    {
-      question: 'How does dailypay calculate my daily earnings ?',
-      answer:
-        `When you join DailyPay, we send a mandate to your HR department for approval. Once approved, your employer agrees to pay your salary into the dedicated DailyPay salary account we provide. From there, DailyPay breaks down your confirmed monthly salary into daily amounts, based on the number of workdays in the month. This ensures accuracy, fairness, and transparency in what you can access each day.`,
-    },
+        'Yes, part-time employees can use DailyPay as long as they meet the basic verification requirements.',
+    }
   ],
   technical: [
-    {
-      question: 'Which banks are supported?',
-      answer:
-        'We support all major Nigerian banks including GTBank, Access Bank, First Bank, UBA, Zenith Bank, and many others. You can also receive funds through virtual accounts.',
-    },
+
     {
       question: 'How fast are transfers?',
       answer:
-        'Transfers are typically instant during business hours (7 AM - 7 PM). Outside business hours, transfers may take up to 2 hours depending on your bank.',
+        'Transfers are typically instant.',
     },
     {
       question: 'Is there a mobile app?',
@@ -146,27 +111,9 @@ export default function FAQPage() {
       />
 
       <Container size="lg" py={80}>
-        <Grid gutter={40}>
-          {categories.map((category) => (
-            <GridCol key={category.title} span={{ base: 12, xs: 6, md: 3 }}>
-              <Card withBorder radius="md" className={classes.categoryCard}>
-                <ThemeIcon
-                  size={50}
-                  radius="md"
-                  color={category.color}
-                  className={classes.categoryIcon}
-                >
-                  <category.icon style={{ width: rem(28), height: rem(28) }} stroke={1.5} />
-                </ThemeIcon>
-                <Text fz="lg" fw={500} mt="md">
-                  {category.title}
-                </Text>
-              </Card>
-            </GridCol>
-          ))}
-        </Grid>
 
-        <Stack mt={80}>
+
+        <Stack>
           {Object.entries(faqs).map(([category, items]) => (
             <div key={category} className={classes.section}>
               <Title order={2} mb="lg" className={classes.sectionTitle}>

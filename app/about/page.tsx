@@ -156,23 +156,7 @@ export default function AboutPage() {
                 </Text>
               </Stack>
 
-              <Card 
-                p="lg" 
-                bg="#f8f9fa"
-                radius="md"
-                style={{ border: '1px solid #e9ecef' }}
-              >
-                <Group gap="md" align="center">
-                  <ThemeIcon size={50} radius="xl" color="#329aae" variant="light">
-                    <IconCheck size={24} />
-                  </ThemeIcon>
-                  <Box>
-                    <Text fw={500} c="#0b4650" size="md">Zero Interest Forever</Text>
-                    <Text c="gray.6" size="sm">No hidden fees, no interest charges, completely free</Text>
-                  </Box>
-                </Group>
-              </Card>
-
+       
               <Group gap="md" mt="xl">
                 <Button 
                   size="lg" 
@@ -228,16 +212,7 @@ export default function AboutPage() {
                     </Text>
                   </Box>
                   
-                  <SimpleGrid cols={2} spacing="xl" w="100%">
-                    <Box ta="center">
-                      <Text size="xl" fw={600} c="white">₦2.5B+</Text>
-                      <Text size="xs" c="rgba(255,255,255,0.8)" fw={400}>Saved in interest</Text>
-                    </Box>
-                    <Box ta="center">
-                      <Text size="xl" fw={600} c="white">98%</Text>
-                      <Text size="xs" c="rgba(255,255,255,0.8)" fw={400}>User satisfaction</Text>
-                    </Box>
-                  </SimpleGrid>
+             
                 </Stack>
               </Card>
             </Stack>
@@ -245,37 +220,7 @@ export default function AboutPage() {
         </Grid>
       </Container>
 
-      {/* Stats Section */}
-      <Box py={80} bg="#f8f9fa">
-        <Container size="lg">
-          <Stack align="center" mb="xl">
-            <Badge size="lg" variant="light" color="#0b4650" radius="md">
-              Our Impact
-            </Badge>
-            <Title order={2} ta="center" fw={400} c="#0b4650">
-              Trusted by Thousands of Nigerian Workers
-            </Title>
-          </Stack>
-          
-          <SimpleGrid cols={{ base: 2, md: 4 }} spacing="xl">
-            {stats.map((stat, index) => (
-              <Card key={index} p="xl" ta="center" radius="md" bg="white" shadow="sm">
-                <Stack align="center" gap="sm">
-                  <ThemeIcon size={50} color="#0b4650" variant="light" radius="xl">
-                    <stat.icon size={24} />
-                  </ThemeIcon>
-                  <Text size="xl" fw={600} c="#0b4650">
-                    {stat.value}
-                  </Text>
-                  <Text size="sm" c="gray.6" fw={400}>
-                    {stat.label}
-                  </Text>
-                </Stack>
-              </Card>
-            ))}
-          </SimpleGrid>
-        </Container>
-      </Box>
+
 
       {/* Values Section */}
       <Container size="lg" py={100}>
@@ -359,77 +304,9 @@ export default function AboutPage() {
         </SimpleGrid>
       </Container>
 
-      {/* Timeline Section */}
-      <Box py={80} bg="#f8f9fa">
-        <Container size="lg">
-          <Stack align="center" gap="lg" mb={60}>
-            <Badge size="lg" variant="light" color="#0b4650" radius="md">
-              Our Journey
-            </Badge>
-            <Title ta="center" size={rem(28)} fw={400} c="#0b4650">
-              Building the Future of Payroll
-            </Title>
-          </Stack>
+   
 
-          <Grid>
-            {timeline.map((item, index) => (
-              <GridCol key={index} span={{ base: 12, sm: 6, md: 3 }}>
-                <Card p="lg" radius="lg" bg="white" h="100%" shadow="sm">
-                  <Stack gap="md">
-                    <Group>
-                      <ThemeIcon size={40} radius="xl" color="#329aae" variant="light">
-                        <Text fw={600} size="sm" c="#329aae">
-                          {item.year}
-                        </Text>
-                      </ThemeIcon>
-                    </Group>
-                    <Title order={4} fw={500} c="#0b4650" size="md">
-                      {item.title}
-                    </Title>
-                    <Text c="gray.7" size="sm" lh={1.5} fw={300}>
-                      {item.description}
-                    </Text>
-                  </Stack>
-                </Card>
-              </GridCol>
-            ))}
-          </Grid>
-        </Container>
-      </Box>
-
-      {/* Team Section */}
-      {/* <Container size="lg" py={80}>
-        <Stack align="center" gap="lg" mb={60}>
-          <Badge size="lg" variant="light" color="#0b4650" radius="md">
-            Leadership Team
-          </Badge>
-          <Title ta="center" size={rem(28)} fw={400} c="#0b4650">
-            Meet the People Behind DailyPay
-          </Title>
-        </Stack>
-
-        <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl">
-          {team.map((member, index) => (
-            <Card key={index} p="xl" radius="lg" bg="white" ta="center" shadow="sm" style={{ border: '1px solid #e9ecef' }}>
-              <Stack align="center" gap="md">
-                <Avatar src={member.avatar} size={100} radius="xl" />
-                <Stack gap="xs" ta="center">
-                  <Title order={4} fw={500} c="#0b4650" size="md">
-                    {member.name}
-                  </Title>
-                  <Text size="sm" c="#329aae" fw={500}>
-                    {member.role}
-                  </Text>
-                  <Text size="sm" c="gray.7" lh={1.5} fw={300}>
-                    {member.bio}
-                  </Text>
-                </Stack>
-              </Stack>
-            </Card>
-          ))}
-        </SimpleGrid>
-      </Container> */}
-
+  
       {/* CTA Section */}
       <Box py={80} bg="#0b4650">
         <Container size="lg">
