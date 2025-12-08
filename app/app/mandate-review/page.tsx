@@ -129,6 +129,9 @@ function HrApprovalContent() {
             monthlySalary: parsed.monthlySalary
               ? formatCurrency(parsed.monthlySalary)
               : prev.monthlySalary,
+              approvedMonthlySalary: parsed.monthlySalary
+              ? formatCurrency(parsed.monthlySalary)
+              : prev.monthlySalary,
             takeHomePay: parsed.takeHomePay ? formatCurrency(parsed.takeHomePay) : prev.takeHomePay,
             role: parsed.jobRole || parsed.jobTitle || prev.role,
             employer: parsed.employer || prev.employer,
